@@ -382,7 +382,7 @@ $WateringCopyWith<$Res>? get watering {
 /// @nodoc
 mixin _$Growth {
 
- List<double>? get optimalTemperatureC; List<int>? get photoperiodHours; int? get co2Ppm;
+ MinMax? get optimalTemperatureC; MinMax? get photoperiodHours; int? get co2Ppm;
 /// Create a copy of Growth
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -395,12 +395,12 @@ $GrowthCopyWith<Growth> get copyWith => _$GrowthCopyWithImpl<Growth>(this as Gro
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Growth&&const DeepCollectionEquality().equals(other.optimalTemperatureC, optimalTemperatureC)&&const DeepCollectionEquality().equals(other.photoperiodHours, photoperiodHours)&&(identical(other.co2Ppm, co2Ppm) || other.co2Ppm == co2Ppm));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Growth&&(identical(other.optimalTemperatureC, optimalTemperatureC) || other.optimalTemperatureC == optimalTemperatureC)&&(identical(other.photoperiodHours, photoperiodHours) || other.photoperiodHours == photoperiodHours)&&(identical(other.co2Ppm, co2Ppm) || other.co2Ppm == co2Ppm));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(optimalTemperatureC),const DeepCollectionEquality().hash(photoperiodHours),co2Ppm);
+int get hashCode => Object.hash(runtimeType,optimalTemperatureC,photoperiodHours,co2Ppm);
 
 @override
 String toString() {
@@ -415,11 +415,11 @@ abstract mixin class $GrowthCopyWith<$Res>  {
   factory $GrowthCopyWith(Growth value, $Res Function(Growth) _then) = _$GrowthCopyWithImpl;
 @useResult
 $Res call({
- List<double>? optimalTemperatureC, List<int>? photoperiodHours, int? co2Ppm
+ MinMax? optimalTemperatureC, MinMax? photoperiodHours, int? co2Ppm
 });
 
 
-
+$MinMaxCopyWith<$Res>? get optimalTemperatureC;$MinMaxCopyWith<$Res>? get photoperiodHours;
 
 }
 /// @nodoc
@@ -435,12 +435,36 @@ class _$GrowthCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? optimalTemperatureC = freezed,Object? photoperiodHours = freezed,Object? co2Ppm = freezed,}) {
   return _then(_self.copyWith(
 optimalTemperatureC: freezed == optimalTemperatureC ? _self.optimalTemperatureC : optimalTemperatureC // ignore: cast_nullable_to_non_nullable
-as List<double>?,photoperiodHours: freezed == photoperiodHours ? _self.photoperiodHours : photoperiodHours // ignore: cast_nullable_to_non_nullable
-as List<int>?,co2Ppm: freezed == co2Ppm ? _self.co2Ppm : co2Ppm // ignore: cast_nullable_to_non_nullable
+as MinMax?,photoperiodHours: freezed == photoperiodHours ? _self.photoperiodHours : photoperiodHours // ignore: cast_nullable_to_non_nullable
+as MinMax?,co2Ppm: freezed == co2Ppm ? _self.co2Ppm : co2Ppm // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
 }
+/// Create a copy of Growth
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res>? get optimalTemperatureC {
+    if (_self.optimalTemperatureC == null) {
+    return null;
+  }
 
+  return $MinMaxCopyWith<$Res>(_self.optimalTemperatureC!, (value) {
+    return _then(_self.copyWith(optimalTemperatureC: value));
+  });
+}/// Create a copy of Growth
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res>? get photoperiodHours {
+    if (_self.photoperiodHours == null) {
+    return null;
+  }
+
+  return $MinMaxCopyWith<$Res>(_self.photoperiodHours!, (value) {
+    return _then(_self.copyWith(photoperiodHours: value));
+  });
+}
 }
 
 
@@ -522,7 +546,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<double>? optimalTemperatureC,  List<int>? photoperiodHours,  int? co2Ppm)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( MinMax? optimalTemperatureC,  MinMax? photoperiodHours,  int? co2Ppm)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Growth() when $default != null:
 return $default(_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm);case _:
@@ -543,7 +567,7 @@ return $default(_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm);c
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<double>? optimalTemperatureC,  List<int>? photoperiodHours,  int? co2Ppm)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( MinMax? optimalTemperatureC,  MinMax? photoperiodHours,  int? co2Ppm)  $default,) {final _that = this;
 switch (_that) {
 case _Growth():
 return $default(_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm);case _:
@@ -563,7 +587,7 @@ return $default(_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm);c
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<double>? optimalTemperatureC,  List<int>? photoperiodHours,  int? co2Ppm)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( MinMax? optimalTemperatureC,  MinMax? photoperiodHours,  int? co2Ppm)?  $default,) {final _that = this;
 switch (_that) {
 case _Growth() when $default != null:
 return $default(_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm);case _:
@@ -578,27 +602,11 @@ return $default(_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm);c
 @JsonSerializable()
 
 class _Growth extends Growth {
-  const _Growth({final  List<double>? optimalTemperatureC, final  List<int>? photoperiodHours, this.co2Ppm}): _optimalTemperatureC = optimalTemperatureC,_photoperiodHours = photoperiodHours,super._();
+  const _Growth({this.optimalTemperatureC, this.photoperiodHours, this.co2Ppm}): super._();
   factory _Growth.fromJson(Map<String, dynamic> json) => _$GrowthFromJson(json);
 
- final  List<double>? _optimalTemperatureC;
-@override List<double>? get optimalTemperatureC {
-  final value = _optimalTemperatureC;
-  if (value == null) return null;
-  if (_optimalTemperatureC is EqualUnmodifiableListView) return _optimalTemperatureC;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<int>? _photoperiodHours;
-@override List<int>? get photoperiodHours {
-  final value = _photoperiodHours;
-  if (value == null) return null;
-  if (_photoperiodHours is EqualUnmodifiableListView) return _photoperiodHours;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
+@override final  MinMax? optimalTemperatureC;
+@override final  MinMax? photoperiodHours;
 @override final  int? co2Ppm;
 
 /// Create a copy of Growth
@@ -614,12 +622,12 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Growth&&const DeepCollectionEquality().equals(other._optimalTemperatureC, _optimalTemperatureC)&&const DeepCollectionEquality().equals(other._photoperiodHours, _photoperiodHours)&&(identical(other.co2Ppm, co2Ppm) || other.co2Ppm == co2Ppm));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Growth&&(identical(other.optimalTemperatureC, optimalTemperatureC) || other.optimalTemperatureC == optimalTemperatureC)&&(identical(other.photoperiodHours, photoperiodHours) || other.photoperiodHours == photoperiodHours)&&(identical(other.co2Ppm, co2Ppm) || other.co2Ppm == co2Ppm));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_optimalTemperatureC),const DeepCollectionEquality().hash(_photoperiodHours),co2Ppm);
+int get hashCode => Object.hash(runtimeType,optimalTemperatureC,photoperiodHours,co2Ppm);
 
 @override
 String toString() {
@@ -634,11 +642,11 @@ abstract mixin class _$GrowthCopyWith<$Res> implements $GrowthCopyWith<$Res> {
   factory _$GrowthCopyWith(_Growth value, $Res Function(_Growth) _then) = __$GrowthCopyWithImpl;
 @override @useResult
 $Res call({
- List<double>? optimalTemperatureC, List<int>? photoperiodHours, int? co2Ppm
+ MinMax? optimalTemperatureC, MinMax? photoperiodHours, int? co2Ppm
 });
 
 
-
+@override $MinMaxCopyWith<$Res>? get optimalTemperatureC;@override $MinMaxCopyWith<$Res>? get photoperiodHours;
 
 }
 /// @nodoc
@@ -653,21 +661,45 @@ class __$GrowthCopyWithImpl<$Res>
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? optimalTemperatureC = freezed,Object? photoperiodHours = freezed,Object? co2Ppm = freezed,}) {
   return _then(_Growth(
-optimalTemperatureC: freezed == optimalTemperatureC ? _self._optimalTemperatureC : optimalTemperatureC // ignore: cast_nullable_to_non_nullable
-as List<double>?,photoperiodHours: freezed == photoperiodHours ? _self._photoperiodHours : photoperiodHours // ignore: cast_nullable_to_non_nullable
-as List<int>?,co2Ppm: freezed == co2Ppm ? _self.co2Ppm : co2Ppm // ignore: cast_nullable_to_non_nullable
+optimalTemperatureC: freezed == optimalTemperatureC ? _self.optimalTemperatureC : optimalTemperatureC // ignore: cast_nullable_to_non_nullable
+as MinMax?,photoperiodHours: freezed == photoperiodHours ? _self.photoperiodHours : photoperiodHours // ignore: cast_nullable_to_non_nullable
+as MinMax?,co2Ppm: freezed == co2Ppm ? _self.co2Ppm : co2Ppm // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
 }
 
+/// Create a copy of Growth
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res>? get optimalTemperatureC {
+    if (_self.optimalTemperatureC == null) {
+    return null;
+  }
 
+  return $MinMaxCopyWith<$Res>(_self.optimalTemperatureC!, (value) {
+    return _then(_self.copyWith(optimalTemperatureC: value));
+  });
+}/// Create a copy of Growth
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res>? get photoperiodHours {
+    if (_self.photoperiodHours == null) {
+    return null;
+  }
+
+  return $MinMaxCopyWith<$Res>(_self.photoperiodHours!, (value) {
+    return _then(_self.copyWith(photoperiodHours: value));
+  });
+}
 }
 
 
 /// @nodoc
 mixin _$Stage {
 
- String get name; String? get durationDays; List<int>? get ppfdUmolM2S; List<double>? get recommendedDliMolM2Day; List<double>? get recommendedRedBlueRatio; String? get notes;
+ String get name; MinMax get durationDays; MinMax get ppfdUmolM2S; MinMax get recommendedDliMolM2Day; MinMax get recommendedRedBlueRatio; String? get notes;
 /// Create a copy of Stage
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -680,12 +712,12 @@ $StageCopyWith<Stage> get copyWith => _$StageCopyWithImpl<Stage>(this as Stage, 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Stage&&(identical(other.name, name) || other.name == name)&&(identical(other.durationDays, durationDays) || other.durationDays == durationDays)&&const DeepCollectionEquality().equals(other.ppfdUmolM2S, ppfdUmolM2S)&&const DeepCollectionEquality().equals(other.recommendedDliMolM2Day, recommendedDliMolM2Day)&&const DeepCollectionEquality().equals(other.recommendedRedBlueRatio, recommendedRedBlueRatio)&&(identical(other.notes, notes) || other.notes == notes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Stage&&(identical(other.name, name) || other.name == name)&&(identical(other.durationDays, durationDays) || other.durationDays == durationDays)&&(identical(other.ppfdUmolM2S, ppfdUmolM2S) || other.ppfdUmolM2S == ppfdUmolM2S)&&(identical(other.recommendedDliMolM2Day, recommendedDliMolM2Day) || other.recommendedDliMolM2Day == recommendedDliMolM2Day)&&(identical(other.recommendedRedBlueRatio, recommendedRedBlueRatio) || other.recommendedRedBlueRatio == recommendedRedBlueRatio)&&(identical(other.notes, notes) || other.notes == notes));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,durationDays,const DeepCollectionEquality().hash(ppfdUmolM2S),const DeepCollectionEquality().hash(recommendedDliMolM2Day),const DeepCollectionEquality().hash(recommendedRedBlueRatio),notes);
+int get hashCode => Object.hash(runtimeType,name,durationDays,ppfdUmolM2S,recommendedDliMolM2Day,recommendedRedBlueRatio,notes);
 
 @override
 String toString() {
@@ -700,11 +732,11 @@ abstract mixin class $StageCopyWith<$Res>  {
   factory $StageCopyWith(Stage value, $Res Function(Stage) _then) = _$StageCopyWithImpl;
 @useResult
 $Res call({
- String name, String? durationDays, List<int>? ppfdUmolM2S, List<double>? recommendedDliMolM2Day, List<double>? recommendedRedBlueRatio, String? notes
+ String name, MinMax durationDays, MinMax ppfdUmolM2S, MinMax recommendedDliMolM2Day, MinMax recommendedRedBlueRatio, String? notes
 });
 
 
-
+$MinMaxCopyWith<$Res> get durationDays;$MinMaxCopyWith<$Res> get ppfdUmolM2S;$MinMaxCopyWith<$Res> get recommendedDliMolM2Day;$MinMaxCopyWith<$Res> get recommendedRedBlueRatio;
 
 }
 /// @nodoc
@@ -717,18 +749,54 @@ class _$StageCopyWithImpl<$Res>
 
 /// Create a copy of Stage
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? durationDays = freezed,Object? ppfdUmolM2S = freezed,Object? recommendedDliMolM2Day = freezed,Object? recommendedRedBlueRatio = freezed,Object? notes = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? durationDays = null,Object? ppfdUmolM2S = null,Object? recommendedDliMolM2Day = null,Object? recommendedRedBlueRatio = null,Object? notes = freezed,}) {
   return _then(_self.copyWith(
 name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,durationDays: freezed == durationDays ? _self.durationDays : durationDays // ignore: cast_nullable_to_non_nullable
-as String?,ppfdUmolM2S: freezed == ppfdUmolM2S ? _self.ppfdUmolM2S : ppfdUmolM2S // ignore: cast_nullable_to_non_nullable
-as List<int>?,recommendedDliMolM2Day: freezed == recommendedDliMolM2Day ? _self.recommendedDliMolM2Day : recommendedDliMolM2Day // ignore: cast_nullable_to_non_nullable
-as List<double>?,recommendedRedBlueRatio: freezed == recommendedRedBlueRatio ? _self.recommendedRedBlueRatio : recommendedRedBlueRatio // ignore: cast_nullable_to_non_nullable
-as List<double>?,notes: freezed == notes ? _self.notes : notes // ignore: cast_nullable_to_non_nullable
+as String,durationDays: null == durationDays ? _self.durationDays : durationDays // ignore: cast_nullable_to_non_nullable
+as MinMax,ppfdUmolM2S: null == ppfdUmolM2S ? _self.ppfdUmolM2S : ppfdUmolM2S // ignore: cast_nullable_to_non_nullable
+as MinMax,recommendedDliMolM2Day: null == recommendedDliMolM2Day ? _self.recommendedDliMolM2Day : recommendedDliMolM2Day // ignore: cast_nullable_to_non_nullable
+as MinMax,recommendedRedBlueRatio: null == recommendedRedBlueRatio ? _self.recommendedRedBlueRatio : recommendedRedBlueRatio // ignore: cast_nullable_to_non_nullable
+as MinMax,notes: freezed == notes ? _self.notes : notes // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }
-
+/// Create a copy of Stage
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res> get durationDays {
+  
+  return $MinMaxCopyWith<$Res>(_self.durationDays, (value) {
+    return _then(_self.copyWith(durationDays: value));
+  });
+}/// Create a copy of Stage
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res> get ppfdUmolM2S {
+  
+  return $MinMaxCopyWith<$Res>(_self.ppfdUmolM2S, (value) {
+    return _then(_self.copyWith(ppfdUmolM2S: value));
+  });
+}/// Create a copy of Stage
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res> get recommendedDliMolM2Day {
+  
+  return $MinMaxCopyWith<$Res>(_self.recommendedDliMolM2Day, (value) {
+    return _then(_self.copyWith(recommendedDliMolM2Day: value));
+  });
+}/// Create a copy of Stage
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res> get recommendedRedBlueRatio {
+  
+  return $MinMaxCopyWith<$Res>(_self.recommendedRedBlueRatio, (value) {
+    return _then(_self.copyWith(recommendedRedBlueRatio: value));
+  });
+}
 }
 
 
@@ -810,7 +878,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  String? durationDays,  List<int>? ppfdUmolM2S,  List<double>? recommendedDliMolM2Day,  List<double>? recommendedRedBlueRatio,  String? notes)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  MinMax durationDays,  MinMax ppfdUmolM2S,  MinMax recommendedDliMolM2Day,  MinMax recommendedRedBlueRatio,  String? notes)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Stage() when $default != null:
 return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommendedDliMolM2Day,_that.recommendedRedBlueRatio,_that.notes);case _:
@@ -831,7 +899,7 @@ return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommende
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  String? durationDays,  List<int>? ppfdUmolM2S,  List<double>? recommendedDliMolM2Day,  List<double>? recommendedRedBlueRatio,  String? notes)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  MinMax durationDays,  MinMax ppfdUmolM2S,  MinMax recommendedDliMolM2Day,  MinMax recommendedRedBlueRatio,  String? notes)  $default,) {final _that = this;
 switch (_that) {
 case _Stage():
 return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommendedDliMolM2Day,_that.recommendedRedBlueRatio,_that.notes);case _:
@@ -851,7 +919,7 @@ return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommende
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  String? durationDays,  List<int>? ppfdUmolM2S,  List<double>? recommendedDliMolM2Day,  List<double>? recommendedRedBlueRatio,  String? notes)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  MinMax durationDays,  MinMax ppfdUmolM2S,  MinMax recommendedDliMolM2Day,  MinMax recommendedRedBlueRatio,  String? notes)?  $default,) {final _that = this;
 switch (_that) {
 case _Stage() when $default != null:
 return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommendedDliMolM2Day,_that.recommendedRedBlueRatio,_that.notes);case _:
@@ -866,38 +934,14 @@ return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommende
 @JsonSerializable()
 
 class _Stage extends Stage {
-  const _Stage({required this.name, this.durationDays, final  List<int>? ppfdUmolM2S, final  List<double>? recommendedDliMolM2Day, final  List<double>? recommendedRedBlueRatio, this.notes}): _ppfdUmolM2S = ppfdUmolM2S,_recommendedDliMolM2Day = recommendedDliMolM2Day,_recommendedRedBlueRatio = recommendedRedBlueRatio,super._();
+  const _Stage({required this.name, required this.durationDays, required this.ppfdUmolM2S, required this.recommendedDliMolM2Day, required this.recommendedRedBlueRatio, this.notes}): super._();
   factory _Stage.fromJson(Map<String, dynamic> json) => _$StageFromJson(json);
 
 @override final  String name;
-@override final  String? durationDays;
- final  List<int>? _ppfdUmolM2S;
-@override List<int>? get ppfdUmolM2S {
-  final value = _ppfdUmolM2S;
-  if (value == null) return null;
-  if (_ppfdUmolM2S is EqualUnmodifiableListView) return _ppfdUmolM2S;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<double>? _recommendedDliMolM2Day;
-@override List<double>? get recommendedDliMolM2Day {
-  final value = _recommendedDliMolM2Day;
-  if (value == null) return null;
-  if (_recommendedDliMolM2Day is EqualUnmodifiableListView) return _recommendedDliMolM2Day;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<double>? _recommendedRedBlueRatio;
-@override List<double>? get recommendedRedBlueRatio {
-  final value = _recommendedRedBlueRatio;
-  if (value == null) return null;
-  if (_recommendedRedBlueRatio is EqualUnmodifiableListView) return _recommendedRedBlueRatio;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
+@override final  MinMax durationDays;
+@override final  MinMax ppfdUmolM2S;
+@override final  MinMax recommendedDliMolM2Day;
+@override final  MinMax recommendedRedBlueRatio;
 @override final  String? notes;
 
 /// Create a copy of Stage
@@ -913,12 +957,12 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Stage&&(identical(other.name, name) || other.name == name)&&(identical(other.durationDays, durationDays) || other.durationDays == durationDays)&&const DeepCollectionEquality().equals(other._ppfdUmolM2S, _ppfdUmolM2S)&&const DeepCollectionEquality().equals(other._recommendedDliMolM2Day, _recommendedDliMolM2Day)&&const DeepCollectionEquality().equals(other._recommendedRedBlueRatio, _recommendedRedBlueRatio)&&(identical(other.notes, notes) || other.notes == notes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Stage&&(identical(other.name, name) || other.name == name)&&(identical(other.durationDays, durationDays) || other.durationDays == durationDays)&&(identical(other.ppfdUmolM2S, ppfdUmolM2S) || other.ppfdUmolM2S == ppfdUmolM2S)&&(identical(other.recommendedDliMolM2Day, recommendedDliMolM2Day) || other.recommendedDliMolM2Day == recommendedDliMolM2Day)&&(identical(other.recommendedRedBlueRatio, recommendedRedBlueRatio) || other.recommendedRedBlueRatio == recommendedRedBlueRatio)&&(identical(other.notes, notes) || other.notes == notes));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,durationDays,const DeepCollectionEquality().hash(_ppfdUmolM2S),const DeepCollectionEquality().hash(_recommendedDliMolM2Day),const DeepCollectionEquality().hash(_recommendedRedBlueRatio),notes);
+int get hashCode => Object.hash(runtimeType,name,durationDays,ppfdUmolM2S,recommendedDliMolM2Day,recommendedRedBlueRatio,notes);
 
 @override
 String toString() {
@@ -933,11 +977,11 @@ abstract mixin class _$StageCopyWith<$Res> implements $StageCopyWith<$Res> {
   factory _$StageCopyWith(_Stage value, $Res Function(_Stage) _then) = __$StageCopyWithImpl;
 @override @useResult
 $Res call({
- String name, String? durationDays, List<int>? ppfdUmolM2S, List<double>? recommendedDliMolM2Day, List<double>? recommendedRedBlueRatio, String? notes
+ String name, MinMax durationDays, MinMax ppfdUmolM2S, MinMax recommendedDliMolM2Day, MinMax recommendedRedBlueRatio, String? notes
 });
 
 
-
+@override $MinMaxCopyWith<$Res> get durationDays;@override $MinMaxCopyWith<$Res> get ppfdUmolM2S;@override $MinMaxCopyWith<$Res> get recommendedDliMolM2Day;@override $MinMaxCopyWith<$Res> get recommendedRedBlueRatio;
 
 }
 /// @nodoc
@@ -950,26 +994,62 @@ class __$StageCopyWithImpl<$Res>
 
 /// Create a copy of Stage
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? durationDays = freezed,Object? ppfdUmolM2S = freezed,Object? recommendedDliMolM2Day = freezed,Object? recommendedRedBlueRatio = freezed,Object? notes = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? durationDays = null,Object? ppfdUmolM2S = null,Object? recommendedDliMolM2Day = null,Object? recommendedRedBlueRatio = null,Object? notes = freezed,}) {
   return _then(_Stage(
 name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,durationDays: freezed == durationDays ? _self.durationDays : durationDays // ignore: cast_nullable_to_non_nullable
-as String?,ppfdUmolM2S: freezed == ppfdUmolM2S ? _self._ppfdUmolM2S : ppfdUmolM2S // ignore: cast_nullable_to_non_nullable
-as List<int>?,recommendedDliMolM2Day: freezed == recommendedDliMolM2Day ? _self._recommendedDliMolM2Day : recommendedDliMolM2Day // ignore: cast_nullable_to_non_nullable
-as List<double>?,recommendedRedBlueRatio: freezed == recommendedRedBlueRatio ? _self._recommendedRedBlueRatio : recommendedRedBlueRatio // ignore: cast_nullable_to_non_nullable
-as List<double>?,notes: freezed == notes ? _self.notes : notes // ignore: cast_nullable_to_non_nullable
+as String,durationDays: null == durationDays ? _self.durationDays : durationDays // ignore: cast_nullable_to_non_nullable
+as MinMax,ppfdUmolM2S: null == ppfdUmolM2S ? _self.ppfdUmolM2S : ppfdUmolM2S // ignore: cast_nullable_to_non_nullable
+as MinMax,recommendedDliMolM2Day: null == recommendedDliMolM2Day ? _self.recommendedDliMolM2Day : recommendedDliMolM2Day // ignore: cast_nullable_to_non_nullable
+as MinMax,recommendedRedBlueRatio: null == recommendedRedBlueRatio ? _self.recommendedRedBlueRatio : recommendedRedBlueRatio // ignore: cast_nullable_to_non_nullable
+as MinMax,notes: freezed == notes ? _self.notes : notes // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }
 
-
+/// Create a copy of Stage
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res> get durationDays {
+  
+  return $MinMaxCopyWith<$Res>(_self.durationDays, (value) {
+    return _then(_self.copyWith(durationDays: value));
+  });
+}/// Create a copy of Stage
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res> get ppfdUmolM2S {
+  
+  return $MinMaxCopyWith<$Res>(_self.ppfdUmolM2S, (value) {
+    return _then(_self.copyWith(ppfdUmolM2S: value));
+  });
+}/// Create a copy of Stage
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res> get recommendedDliMolM2Day {
+  
+  return $MinMaxCopyWith<$Res>(_self.recommendedDliMolM2Day, (value) {
+    return _then(_self.copyWith(recommendedDliMolM2Day: value));
+  });
+}/// Create a copy of Stage
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res> get recommendedRedBlueRatio {
+  
+  return $MinMaxCopyWith<$Res>(_self.recommendedRedBlueRatio, (value) {
+    return _then(_self.copyWith(recommendedRedBlueRatio: value));
+  });
+}
 }
 
 
 /// @nodoc
 mixin _$Nutrition {
 
- List<double>? get ecMSCm; List<double>? get ph;
+ MinMax? get ecMSCm; MinMax? get ph;
 /// Create a copy of Nutrition
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -982,12 +1062,12 @@ $NutritionCopyWith<Nutrition> get copyWith => _$NutritionCopyWithImpl<Nutrition>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Nutrition&&const DeepCollectionEquality().equals(other.ecMSCm, ecMSCm)&&const DeepCollectionEquality().equals(other.ph, ph));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Nutrition&&(identical(other.ecMSCm, ecMSCm) || other.ecMSCm == ecMSCm)&&(identical(other.ph, ph) || other.ph == ph));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(ecMSCm),const DeepCollectionEquality().hash(ph));
+int get hashCode => Object.hash(runtimeType,ecMSCm,ph);
 
 @override
 String toString() {
@@ -1002,11 +1082,11 @@ abstract mixin class $NutritionCopyWith<$Res>  {
   factory $NutritionCopyWith(Nutrition value, $Res Function(Nutrition) _then) = _$NutritionCopyWithImpl;
 @useResult
 $Res call({
- List<double>? ecMSCm, List<double>? ph
+ MinMax? ecMSCm, MinMax? ph
 });
 
 
-
+$MinMaxCopyWith<$Res>? get ecMSCm;$MinMaxCopyWith<$Res>? get ph;
 
 }
 /// @nodoc
@@ -1022,11 +1102,35 @@ class _$NutritionCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? ecMSCm = freezed,Object? ph = freezed,}) {
   return _then(_self.copyWith(
 ecMSCm: freezed == ecMSCm ? _self.ecMSCm : ecMSCm // ignore: cast_nullable_to_non_nullable
-as List<double>?,ph: freezed == ph ? _self.ph : ph // ignore: cast_nullable_to_non_nullable
-as List<double>?,
+as MinMax?,ph: freezed == ph ? _self.ph : ph // ignore: cast_nullable_to_non_nullable
+as MinMax?,
   ));
 }
+/// Create a copy of Nutrition
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res>? get ecMSCm {
+    if (_self.ecMSCm == null) {
+    return null;
+  }
 
+  return $MinMaxCopyWith<$Res>(_self.ecMSCm!, (value) {
+    return _then(_self.copyWith(ecMSCm: value));
+  });
+}/// Create a copy of Nutrition
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res>? get ph {
+    if (_self.ph == null) {
+    return null;
+  }
+
+  return $MinMaxCopyWith<$Res>(_self.ph!, (value) {
+    return _then(_self.copyWith(ph: value));
+  });
+}
 }
 
 
@@ -1108,7 +1212,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<double>? ecMSCm,  List<double>? ph)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( MinMax? ecMSCm,  MinMax? ph)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Nutrition() when $default != null:
 return $default(_that.ecMSCm,_that.ph);case _:
@@ -1129,7 +1233,7 @@ return $default(_that.ecMSCm,_that.ph);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<double>? ecMSCm,  List<double>? ph)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( MinMax? ecMSCm,  MinMax? ph)  $default,) {final _that = this;
 switch (_that) {
 case _Nutrition():
 return $default(_that.ecMSCm,_that.ph);case _:
@@ -1149,7 +1253,7 @@ return $default(_that.ecMSCm,_that.ph);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<double>? ecMSCm,  List<double>? ph)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( MinMax? ecMSCm,  MinMax? ph)?  $default,) {final _that = this;
 switch (_that) {
 case _Nutrition() when $default != null:
 return $default(_that.ecMSCm,_that.ph);case _:
@@ -1164,27 +1268,11 @@ return $default(_that.ecMSCm,_that.ph);case _:
 @JsonSerializable()
 
 class _Nutrition extends Nutrition {
-  const _Nutrition({final  List<double>? ecMSCm, final  List<double>? ph}): _ecMSCm = ecMSCm,_ph = ph,super._();
+  const _Nutrition({this.ecMSCm, this.ph}): super._();
   factory _Nutrition.fromJson(Map<String, dynamic> json) => _$NutritionFromJson(json);
 
- final  List<double>? _ecMSCm;
-@override List<double>? get ecMSCm {
-  final value = _ecMSCm;
-  if (value == null) return null;
-  if (_ecMSCm is EqualUnmodifiableListView) return _ecMSCm;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<double>? _ph;
-@override List<double>? get ph {
-  final value = _ph;
-  if (value == null) return null;
-  if (_ph is EqualUnmodifiableListView) return _ph;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
+@override final  MinMax? ecMSCm;
+@override final  MinMax? ph;
 
 /// Create a copy of Nutrition
 /// with the given fields replaced by the non-null parameter values.
@@ -1199,12 +1287,12 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Nutrition&&const DeepCollectionEquality().equals(other._ecMSCm, _ecMSCm)&&const DeepCollectionEquality().equals(other._ph, _ph));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Nutrition&&(identical(other.ecMSCm, ecMSCm) || other.ecMSCm == ecMSCm)&&(identical(other.ph, ph) || other.ph == ph));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_ecMSCm),const DeepCollectionEquality().hash(_ph));
+int get hashCode => Object.hash(runtimeType,ecMSCm,ph);
 
 @override
 String toString() {
@@ -1219,11 +1307,11 @@ abstract mixin class _$NutritionCopyWith<$Res> implements $NutritionCopyWith<$Re
   factory _$NutritionCopyWith(_Nutrition value, $Res Function(_Nutrition) _then) = __$NutritionCopyWithImpl;
 @override @useResult
 $Res call({
- List<double>? ecMSCm, List<double>? ph
+ MinMax? ecMSCm, MinMax? ph
 });
 
 
-
+@override $MinMaxCopyWith<$Res>? get ecMSCm;@override $MinMaxCopyWith<$Res>? get ph;
 
 }
 /// @nodoc
@@ -1238,13 +1326,37 @@ class __$NutritionCopyWithImpl<$Res>
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? ecMSCm = freezed,Object? ph = freezed,}) {
   return _then(_Nutrition(
-ecMSCm: freezed == ecMSCm ? _self._ecMSCm : ecMSCm // ignore: cast_nullable_to_non_nullable
-as List<double>?,ph: freezed == ph ? _self._ph : ph // ignore: cast_nullable_to_non_nullable
-as List<double>?,
+ecMSCm: freezed == ecMSCm ? _self.ecMSCm : ecMSCm // ignore: cast_nullable_to_non_nullable
+as MinMax?,ph: freezed == ph ? _self.ph : ph // ignore: cast_nullable_to_non_nullable
+as MinMax?,
   ));
 }
 
+/// Create a copy of Nutrition
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res>? get ecMSCm {
+    if (_self.ecMSCm == null) {
+    return null;
+  }
 
+  return $MinMaxCopyWith<$Res>(_self.ecMSCm!, (value) {
+    return _then(_self.copyWith(ecMSCm: value));
+  });
+}/// Create a copy of Nutrition
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<$Res>? get ph {
+    if (_self.ph == null) {
+    return null;
+  }
+
+  return $MinMaxCopyWith<$Res>(_self.ph!, (value) {
+    return _then(_self.copyWith(ph: value));
+  });
+}
 }
 
 
@@ -1507,6 +1619,272 @@ class __$WateringCopyWithImpl<$Res>
 frequencyDays: freezed == frequencyDays ? _self.frequencyDays : frequencyDays // ignore: cast_nullable_to_non_nullable
 as String?,method: freezed == method ? _self.method : method // ignore: cast_nullable_to_non_nullable
 as String?,
+  ));
+}
+
+
+}
+
+
+/// @nodoc
+mixin _$MinMax {
+
+ double get min; double get max;
+/// Create a copy of MinMax
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$MinMaxCopyWith<MinMax> get copyWith => _$MinMaxCopyWithImpl<MinMax>(this as MinMax, _$identity);
+
+  /// Serializes this MinMax to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MinMax&&(identical(other.min, min) || other.min == min)&&(identical(other.max, max) || other.max == max));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,min,max);
+
+@override
+String toString() {
+  return 'MinMax(min: $min, max: $max)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $MinMaxCopyWith<$Res>  {
+  factory $MinMaxCopyWith(MinMax value, $Res Function(MinMax) _then) = _$MinMaxCopyWithImpl;
+@useResult
+$Res call({
+ double min, double max
+});
+
+
+
+
+}
+/// @nodoc
+class _$MinMaxCopyWithImpl<$Res>
+    implements $MinMaxCopyWith<$Res> {
+  _$MinMaxCopyWithImpl(this._self, this._then);
+
+  final MinMax _self;
+  final $Res Function(MinMax) _then;
+
+/// Create a copy of MinMax
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? min = null,Object? max = null,}) {
+  return _then(_self.copyWith(
+min: null == min ? _self.min : min // ignore: cast_nullable_to_non_nullable
+as double,max: null == max ? _self.max : max // ignore: cast_nullable_to_non_nullable
+as double,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [MinMax].
+extension MinMaxPatterns on MinMax {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MinMax value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _MinMax() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MinMax value)  $default,){
+final _that = this;
+switch (_that) {
+case _MinMax():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MinMax value)?  $default,){
+final _that = this;
+switch (_that) {
+case _MinMax() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( double min,  double max)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _MinMax() when $default != null:
+return $default(_that.min,_that.max);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( double min,  double max)  $default,) {final _that = this;
+switch (_that) {
+case _MinMax():
+return $default(_that.min,_that.max);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( double min,  double max)?  $default,) {final _that = this;
+switch (_that) {
+case _MinMax() when $default != null:
+return $default(_that.min,_that.max);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class _MinMax extends MinMax {
+  const _MinMax({required this.min, required this.max}): super._();
+  factory _MinMax.fromJson(Map<String, dynamic> json) => _$MinMaxFromJson(json);
+
+@override final  double min;
+@override final  double max;
+
+/// Create a copy of MinMax
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$MinMaxCopyWith<_MinMax> get copyWith => __$MinMaxCopyWithImpl<_MinMax>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$MinMaxToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MinMax&&(identical(other.min, min) || other.min == min)&&(identical(other.max, max) || other.max == max));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,min,max);
+
+@override
+String toString() {
+  return 'MinMax(min: $min, max: $max)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$MinMaxCopyWith<$Res> implements $MinMaxCopyWith<$Res> {
+  factory _$MinMaxCopyWith(_MinMax value, $Res Function(_MinMax) _then) = __$MinMaxCopyWithImpl;
+@override @useResult
+$Res call({
+ double min, double max
+});
+
+
+
+
+}
+/// @nodoc
+class __$MinMaxCopyWithImpl<$Res>
+    implements _$MinMaxCopyWith<$Res> {
+  __$MinMaxCopyWithImpl(this._self, this._then);
+
+  final _MinMax _self;
+  final $Res Function(_MinMax) _then;
+
+/// Create a copy of MinMax
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? min = null,Object? max = null,}) {
+  return _then(_MinMax(
+min: null == min ? _self.min : min // ignore: cast_nullable_to_non_nullable
+as double,max: null == max ? _self.max : max // ignore: cast_nullable_to_non_nullable
+as double,
   ));
 }
 

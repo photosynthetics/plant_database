@@ -40,12 +40,12 @@ Map<String, dynamic> _$PlantModelToJson(_PlantModel instance) =>
     };
 
 _Growth _$GrowthFromJson(Map<String, dynamic> json) => _Growth(
-  optimalTemperatureC: (json['optimalTemperatureC'] as List<dynamic>?)
-      ?.map((e) => (e as num).toDouble())
-      .toList(),
-  photoperiodHours: (json['photoperiodHours'] as List<dynamic>?)
-      ?.map((e) => (e as num).toInt())
-      .toList(),
+  optimalTemperatureC: json['optimalTemperatureC'] == null
+      ? null
+      : MinMax.fromJson(json['optimalTemperatureC'] as Map<String, dynamic>),
+  photoperiodHours: json['photoperiodHours'] == null
+      ? null
+      : MinMax.fromJson(json['photoperiodHours'] as Map<String, dynamic>),
   co2Ppm: (json['co2Ppm'] as num?)?.toInt(),
 );
 
@@ -57,16 +57,14 @@ Map<String, dynamic> _$GrowthToJson(_Growth instance) => <String, dynamic>{
 
 _Stage _$StageFromJson(Map<String, dynamic> json) => _Stage(
   name: json['name'] as String,
-  durationDays: json['durationDays'] as String?,
-  ppfdUmolM2S: (json['ppfdUmolM2S'] as List<dynamic>?)
-      ?.map((e) => (e as num).toInt())
-      .toList(),
-  recommendedDliMolM2Day: (json['recommendedDliMolM2Day'] as List<dynamic>?)
-      ?.map((e) => (e as num).toDouble())
-      .toList(),
-  recommendedRedBlueRatio: (json['recommendedRedBlueRatio'] as List<dynamic>?)
-      ?.map((e) => (e as num).toDouble())
-      .toList(),
+  durationDays: MinMax.fromJson(json['durationDays'] as Map<String, dynamic>),
+  ppfdUmolM2S: MinMax.fromJson(json['ppfdUmolM2S'] as Map<String, dynamic>),
+  recommendedDliMolM2Day: MinMax.fromJson(
+    json['recommendedDliMolM2Day'] as Map<String, dynamic>,
+  ),
+  recommendedRedBlueRatio: MinMax.fromJson(
+    json['recommendedRedBlueRatio'] as Map<String, dynamic>,
+  ),
   notes: json['notes'] as String?,
 );
 
@@ -80,12 +78,12 @@ Map<String, dynamic> _$StageToJson(_Stage instance) => <String, dynamic>{
 };
 
 _Nutrition _$NutritionFromJson(Map<String, dynamic> json) => _Nutrition(
-  ecMSCm: (json['ecMSCm'] as List<dynamic>?)
-      ?.map((e) => (e as num).toDouble())
-      .toList(),
-  ph: (json['ph'] as List<dynamic>?)
-      ?.map((e) => (e as num).toDouble())
-      .toList(),
+  ecMSCm: json['ecMSCm'] == null
+      ? null
+      : MinMax.fromJson(json['ecMSCm'] as Map<String, dynamic>),
+  ph: json['ph'] == null
+      ? null
+      : MinMax.fromJson(json['ph'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$NutritionToJson(_Nutrition instance) =>
@@ -99,4 +97,14 @@ _Watering _$WateringFromJson(Map<String, dynamic> json) => _Watering(
 Map<String, dynamic> _$WateringToJson(_Watering instance) => <String, dynamic>{
   'frequencyDays': instance.frequencyDays,
   'method': instance.method,
+};
+
+_MinMax _$MinMaxFromJson(Map<String, dynamic> json) => _MinMax(
+  min: (json['min'] as num).toDouble(),
+  max: (json['max'] as num).toDouble(),
+);
+
+Map<String, dynamic> _$MinMaxToJson(_MinMax instance) => <String, dynamic>{
+  'min': instance.min,
+  'max': instance.max,
 };

@@ -12,7 +12,7 @@ growth:
 
 stages:
   - name: seedling
-    duration_days: 10-20
+    duration_days: [10, 20]
     ppfd_umol_m2_s: [30, 80]
     recommended_dli_mol_m2_day: [2, 4]
     # Recommended red:blue ratio (red divided by blue). Values < 1 mean blue-dominant spectra.
@@ -21,7 +21,7 @@ stages:
       Keep soil moist and warm for germination.
 
   - name: vegetative
-    duration_days: 20-40
+    duration_days: [20, 40]
     ppfd_umol_m2_s: [150, 300]
     recommended_dli_mol_m2_day: [12, 18]
     # Favor red for leaf expansion and biomass during vegetative growth.
@@ -30,7 +30,7 @@ stages:
       Increase light intensity and ensure good airflow.
 
   - name: mature
-    duration_days: 40-60
+    duration_days: [40, 60]
     ppfd_umol_m2_s: [200, 400]
     recommended_dli_mol_m2_day: [18, 24]
     # Higher red fraction for finishing; promotes biomass and flowering traits.

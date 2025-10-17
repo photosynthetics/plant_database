@@ -28,6 +28,7 @@ abstract class PlantModel with _$PlantModel {
     if (doc is YamlMap) {
       // Convert YamlMap to a plain Map<String, dynamic> recursively
       Map<String, dynamic> map = _yamlMapToMap(doc);
+      _normalizeMinMaxInMap(map);
       return PlantModel.fromJson(map);
     }
     throw FormatException('Invalid YAML for PlantModel');
@@ -36,11 +37,21 @@ abstract class PlantModel with _$PlantModel {
   /// Flexible YAML factory that accepts a YAML string, a YamlMap or a plain Map.
   factory PlantModel.fromYaml(dynamic yaml) {
     if (yaml is String) return PlantModel.fromYamlString(yaml);
-    if (yaml is YamlMap) return PlantModel.fromJson(_yamlMapToMap(yaml));
-    if (yaml is Map<String, dynamic>) return PlantModel.fromJson(yaml);
+    if (yaml is YamlMap) {
+      final m = _yamlMapToMap(yaml);
+      _normalizeMinMaxInMap(m);
+      return PlantModel.fromJson(m);
+    }
+    if (yaml is Map<String, dynamic>) {
+      final m = _dynamicMapToMap(yaml);
+      _normalizeMinMaxInMap(m);
+      return PlantModel.fromJson(m);
+    }
     if (yaml is Map) {
       // convert dynamic-keyed map to proper string-keyed map with converted keys
-      return PlantModel.fromJson(_dynamicMapToMap(yaml));
+      final m = _dynamicMapToMap(yaml);
+      _normalizeMinMaxInMap(m);
+      return PlantModel.fromJson(m);
     }
     throw FormatException('Unsupported YAML input for PlantModel');
   }
@@ -50,7 +61,8 @@ abstract class PlantModel with _$PlantModel {
 abstract class Growth with _$Growth {
   const Growth._();
 
-  const factory Growth({List<double>? optimalTemperatureC, List<int>? photoperiodHours, int? co2Ppm}) = _Growth;
+  // Use MinMax for pair values so lists like [20,30] become MinMax(min:20,max:30)
+  const factory Growth({MinMax? optimalTemperatureC, MinMax? photoperiodHours, int? co2Ppm}) = _Growth;
 
   factory Growth.fromJson(Map<String, dynamic> json) => _$GrowthFromJson(json);
 }
@@ -61,10 +73,10 @@ abstract class Stage with _$Stage {
 
   const factory Stage({
     required String name,
-    String? durationDays,
-    List<int>? ppfdUmolM2S,
-    List<double>? recommendedDliMolM2Day,
-    List<double>? recommendedRedBlueRatio,
+    required MinMax durationDays,
+    required MinMax ppfdUmolM2S,
+    required MinMax recommendedDliMolM2Day,
+    required MinMax recommendedRedBlueRatio,
     String? notes,
   }) = _Stage;
 
@@ -75,7 +87,8 @@ abstract class Stage with _$Stage {
 abstract class Nutrition with _$Nutrition {
   const Nutrition._();
 
-  const factory Nutrition({List<double>? ecMSCm, List<double>? ph}) = _Nutrition;
+  // Use MinMax for numeric pairs
+  const factory Nutrition({MinMax? ecMSCm, MinMax? ph}) = _Nutrition;
 
   factory Nutrition.fromJson(Map<String, dynamic> json) => _$NutritionFromJson(json);
 }
@@ -122,4 +135,42 @@ String _snakeToCamel(String s) {
   if (!s.contains('_')) return s;
   final parts = s.split('_');
   return parts.first + parts.skip(1).map((p) => p.isEmpty ? '' : p[0].toUpperCase() + p.substring(1)).join();
+}
+
+/// Walk a dynamic map and convert any list of two numbers into a MinMax-style map
+void _normalizeMinMaxInMap(Map<String, dynamic> map) {
+  for (final entry in map.entries.toList()) {
+    final key = entry.key;
+    final value = entry.value;
+    if (value is Map<String, dynamic>) {
+      _normalizeMinMaxInMap(value);
+    } else if (value is List && value.length == 2 && value.every((e) => e is num)) {
+      // Convert any numeric pair to a MinMax map
+      map[key] = {'min': (value[0] as num).toDouble(), 'max': (value[1] as num).toDouble()};
+    } else if (value is List) {
+      // For lists of maps (e.g., stages), normalize each element
+      for (var i = 0; i < value.length; i++) {
+        final el = value[i];
+        if (el is Map<String, dynamic>) {
+          _normalizeMinMaxInMap(el);
+        }
+      }
+    }
+  }
+}
+
+@freezed
+abstract class MinMax with _$MinMax {
+  const MinMax._();
+
+  const factory MinMax({required double min, required double max}) = _MinMax;
+
+  factory MinMax.fromJson(Map<String, dynamic> json) => _$MinMaxFromJson(json);
+
+  // Add index operator to access min and max by index
+  double operator [](int index) {
+    if (index == 0) return min;
+    if (index == 1) return max;
+    throw RangeError.index(index, this, 'Index out of range: $index');
+  }
 }
