@@ -18,4 +18,5 @@ void main(List<String> args) async {
       print('Stage: ${s.name} duration min=${s.durationDays.min} max=${s.durationDays.max}');
     }
   }
+  print(plant);
 }
