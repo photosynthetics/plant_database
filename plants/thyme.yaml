@@ -1,0 +1,46 @@
+latin_name: Thymus vulgaris
+common_name: Thyme
+family: Lamiaceae
+type: herb
+description: >
+  Thyme is a hardy, low-growing herb used in cooking and aromatherapy. It tolerates slightly lower light than some tender herbs but still responds well to steady, moderate-intensity artificial lighting.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [50, 120]
+    recommended_dli_mol_m2_day: [3, 6]
+    recommended_red_blue_ratio: [0.8, 1.5]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Keep substrate lightly moist; thyme seedlings prefer slightly cooler temperatures than basil.
+
+  - name: vegetative
+    duration_days: [30, 60]
+    ppfd_umol_m2_s: [120, 250]
+    recommended_dli_mol_m2_day: [10, 16]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Provide good airflow and moderate light intensity; prune to encourage bushiness.
+
+  - name: mature
+    duration_days: [60, 120]
+    ppfd_umol_m2_s: [150, 350]
+    recommended_dli_mol_m2_day: [14, 22]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 24]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.8]
+    ph: [6.0, 7.0]
+    notes: >
+      Thyme is fairly drought tolerant once established; reduce photoperiod slightly for flower induction if desired.
