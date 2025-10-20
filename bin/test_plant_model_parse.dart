@@ -12,11 +12,11 @@ void main(List<String> args) async {
   final plant = PlantModel.fromYamlString(content);
   print('Parsed plant: ${plant.commonName} (${plant.latinName})');
   print('Family: ${plant.family}');
-  print('Growth optimal temp: ${plant.growth?.optimalTemperatureC}');
-  if (plant.stages != null) {
-    for (final s in plant.stages!) {
-      print('Stage: ${s.name} duration min=${s.durationDays.min} max=${s.durationDays.max}');
-    }
+
+  for (final s in plant.stages) {
+    print(
+      'Stage: ${s.name} duration min=${s.durationDays.min} max=${s.durationDays.max}',
+    );
   }
   print(plant);
 }

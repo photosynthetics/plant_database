@@ -10,20 +10,11 @@ _PlantModel _$PlantModelFromJson(Map<String, dynamic> json) => _PlantModel(
   latinName: json['latinName'] as String,
   commonName: json['commonName'] as String,
   family: json['family'] as String,
-  type: json['type'] as String?,
-  description: json['description'] as String?,
-  growth: json['growth'] == null
-      ? null
-      : Growth.fromJson(json['growth'] as Map<String, dynamic>),
-  stages: (json['stages'] as List<dynamic>?)
-      ?.map((e) => Stage.fromJson(e as Map<String, dynamic>))
+  type: json['type'] as String,
+  description: json['description'] as String,
+  stages: (json['stages'] as List<dynamic>)
+      .map((e) => Stage.fromJson(e as Map<String, dynamic>))
       .toList(),
-  nutrition: json['nutrition'] == null
-      ? null
-      : Nutrition.fromJson(json['nutrition'] as Map<String, dynamic>),
-  watering: json['watering'] == null
-      ? null
-      : Watering.fromJson(json['watering'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$PlantModelToJson(_PlantModel instance) =>
@@ -33,10 +24,7 @@ Map<String, dynamic> _$PlantModelToJson(_PlantModel instance) =>
       'family': instance.family,
       'type': instance.type,
       'description': instance.description,
-      'growth': instance.growth,
       'stages': instance.stages,
-      'nutrition': instance.nutrition,
-      'watering': instance.watering,
     };
 
 _Growth _$GrowthFromJson(Map<String, dynamic> json) => _Growth(
@@ -65,6 +53,15 @@ _Stage _$StageFromJson(Map<String, dynamic> json) => _Stage(
   recommendedRedBlueRatio: MinMax.fromJson(
     json['recommendedRedBlueRatio'] as Map<String, dynamic>,
   ),
+  optimalTemperatureC: MinMax.fromJson(
+    json['optimalTemperatureC'] as Map<String, dynamic>,
+  ),
+  photoperiodHours: MinMax.fromJson(
+    json['photoperiodHours'] as Map<String, dynamic>,
+  ),
+  co2Ppm: (json['co2Ppm'] as num).toInt(),
+  ecMSCm: MinMax.fromJson(json['ecMSCm'] as Map<String, dynamic>),
+  ph: MinMax.fromJson(json['ph'] as Map<String, dynamic>),
   notes: json['notes'] as String?,
 );
 
@@ -74,29 +71,12 @@ Map<String, dynamic> _$StageToJson(_Stage instance) => <String, dynamic>{
   'ppfdUmolM2S': instance.ppfdUmolM2S,
   'recommendedDliMolM2Day': instance.recommendedDliMolM2Day,
   'recommendedRedBlueRatio': instance.recommendedRedBlueRatio,
+  'optimalTemperatureC': instance.optimalTemperatureC,
+  'photoperiodHours': instance.photoperiodHours,
+  'co2Ppm': instance.co2Ppm,
+  'ecMSCm': instance.ecMSCm,
+  'ph': instance.ph,
   'notes': instance.notes,
-};
-
-_Nutrition _$NutritionFromJson(Map<String, dynamic> json) => _Nutrition(
-  ecMSCm: json['ecMSCm'] == null
-      ? null
-      : MinMax.fromJson(json['ecMSCm'] as Map<String, dynamic>),
-  ph: json['ph'] == null
-      ? null
-      : MinMax.fromJson(json['ph'] as Map<String, dynamic>),
-);
-
-Map<String, dynamic> _$NutritionToJson(_Nutrition instance) =>
-    <String, dynamic>{'ecMSCm': instance.ecMSCm, 'ph': instance.ph};
-
-_Watering _$WateringFromJson(Map<String, dynamic> json) => _Watering(
-  frequencyDays: json['frequencyDays'] as String?,
-  method: json['method'] as String?,
-);
-
-Map<String, dynamic> _$WateringToJson(_Watering instance) => <String, dynamic>{
-  'frequencyDays': instance.frequencyDays,
-  'method': instance.method,
 };
 
 _MinMax _$MinMaxFromJson(Map<String, dynamic> json) => _MinMax(

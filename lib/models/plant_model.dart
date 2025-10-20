@@ -12,12 +12,9 @@ abstract class PlantModel with _$PlantModel {
     required String latinName,
     required String commonName,
     required String family,
-    String? type,
-    String? description,
-    Growth? growth,
-    List<Stage>? stages,
-    Nutrition? nutrition,
-    Watering? watering,
+    required String type,
+    required String description,
+    required List<Stage> stages,
   }) = _PlantModel;
 
   factory PlantModel.fromJson(Map<String, dynamic> json) => _$PlantModelFromJson(json);
@@ -77,30 +74,19 @@ abstract class Stage with _$Stage {
     required MinMax ppfdUmolM2S,
     required MinMax recommendedDliMolM2Day,
     required MinMax recommendedRedBlueRatio,
+    required MinMax optimalTemperatureC,
+    required MinMax photoperiodHours, 
+    required int co2Ppm,
+    required MinMax ecMSCm,
+    required MinMax ph,
     String? notes,
   }) = _Stage;
 
   factory Stage.fromJson(Map<String, dynamic> json) => _$StageFromJson(json);
 }
 
-@freezed
-abstract class Nutrition with _$Nutrition {
-  const Nutrition._();
 
-  // Use MinMax for numeric pairs
-  const factory Nutrition({MinMax? ecMSCm, MinMax? ph}) = _Nutrition;
 
-  factory Nutrition.fromJson(Map<String, dynamic> json) => _$NutritionFromJson(json);
-}
-
-@freezed
-abstract class Watering with _$Watering {
-  const Watering._();
-
-  const factory Watering({String? frequencyDays, String? method}) = _Watering;
-
-  factory Watering.fromJson(Map<String, dynamic> json) => _$WateringFromJson(json);
-}
 
 // Helper to convert YamlMap to Map<String, dynamic> recursively
 Map<String, dynamic> _yamlMapToMap(YamlMap input) {
