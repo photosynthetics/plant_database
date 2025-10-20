@@ -1,0 +1,46 @@
+latin_name: None
+common_name: Medium Light Herb
+family: None
+type: herb
+description: >
+  A typical herb or leafy green that prefers moderate light levels—suitable for sunny windows or supplemented indoor lighting.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [50, 120]
+    recommended_dli_mol_m2_day: [3, 6]
+    recommended_red_blue_ratio: [1.5, 2.5]
+    co2_ppm: 400
+    optimal_temperature_c: [20, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 1.5]
+    ph: [5.5, 6.5]
+    notes: >
+      Maintain even moisture and steady light during establishment.
+
+  - name: vegetative
+    duration_days: [20, 35]
+    ppfd_umol_m2_s: [150, 300]
+    recommended_dli_mol_m2_day: [12, 18]
+    recommended_red_blue_ratio: [2.5, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [20, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 1.8]
+    ph: [5.5, 6.5]
+    notes: >
+      Increase light and nutrients to promote leaf density; ensure good circulation.
+
+  - name: mature
+    duration_days: [40, 70]
+    ppfd_umol_m2_s: [250, 400]
+    recommended_dli_mol_m2_day: [18, 24]
+    recommended_red_blue_ratio: [4, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [20, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.4, 2.0]
+    ph: [5.5, 6.5]
+    notes: >
+      Regular harvest and balanced nutrients produce best flavor and biomass.

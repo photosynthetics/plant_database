@@ -1,0 +1,46 @@
+latin_name: None
+common_name: High Light Herb
+family: None
+type: herb
+description: >
+  A robust herb that thrives under strong light—ideal for full sun conditions or powerful indoor fixtures.
+
+stages:
+  - name: seedling
+    duration_days: [5, 12]
+    ppfd_umol_m2_s: [80, 200]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1, 1.5]
+    co2_ppm: 400
+    optimal_temperature_c: [20, 28]
+    photoperiod_hours: [14, 18]
+    ec_mS_cm: [1.0, 2.0]
+    ph: [5.8, 6.8]
+    notes: >
+      Protect young seedlings from heat stress; provide gentle airflow and consistent moisture.
+
+  - name: vegetative
+    duration_days: [15, 30]
+    ppfd_umol_m2_s: [300, 600]
+    recommended_dli_mol_m2_day: [18, 30]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [22, 28]
+    photoperiod_hours: [14, 18]
+    ec_mS_cm: [1.4, 2.5]
+    ph: [5.8, 6.8]
+    notes: >
+      High light and regular feeding support rapid, compact growth; avoid leaf burn by allowing acclimation.
+
+  - name: mature
+    duration_days: [40, 90]
+    ppfd_umol_m2_s: [500, 1000]
+    recommended_dli_mol_m2_day: [25, 40]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [22, 30]
+    photoperiod_hours: [14, 18]
+    ec_mS_cm: [1.6, 3.0]
+    ph: [5.8, 6.8]
+    notes: >
+      High-intensity environments yield large biomass—monitor water and nutrients closely to prevent stress.

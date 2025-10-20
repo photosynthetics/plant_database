@@ -1,0 +1,46 @@
+latin_name: None
+common_name: Low Light Herb
+family: None
+type: herb
+description: >
+  A generic leafy herb adapted to lower light conditions. Good for shaded windowsills and indoor areas with indirect light.
+
+stages:
+  - name: seedling
+    duration_days: [10, 20]
+    ppfd_umol_m2_s: [20, 60]
+    recommended_dli_mol_m2_day: [1, 2]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 24]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.2]
+    ph: [5.5, 6.5]
+    notes: >
+      Keep soil lightly moist and avoid direct intense sun until established.
+
+  - name: vegetative
+    duration_days: [20, 40]
+    ppfd_umol_m2_s: [40, 120]
+    recommended_dli_mol_m2_day: [2, 6]
+    recommended_red_blue_ratio: [2, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 24]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [5.5, 6.5]
+    notes: >
+      Provide consistent, gentle light and moderate watering; good airflow helps prevent disease.
+
+  - name: mature
+    duration_days: [40, 70]
+    ppfd_umol_m2_s: [60, 150]
+    recommended_dli_mol_m2_day: [3, 8]
+    recommended_red_blue_ratio: [3, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 24]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.6]
+    ph: [5.5, 6.5]
+    notes: >
+      Harvest leaves selectively to encourage continued growth; avoid prolonged drought or bright midday sun.
