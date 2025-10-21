@@ -1,0 +1,46 @@
+latin_name: Spinacia oleracea
+common_name: Spinach
+family: Amaranthaceae
+type: leafy green
+description: >
+  Spinach prefers cool temperatures and moderate light; tolerates low light but yields and leaf thickness improve under moderate PPFD.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [50, 150]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 20]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Cool-season crop; watch for bolting in warm conditions.
+
+  - name: vegetative
+    duration_days: [20, 40]
+    ppfd_umol_m2_s: [100, 300]
+    recommended_dli_mol_m2_day: [12, 20]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [8, 20]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [1.0, 1.8]
+    ph: [6.0, 7.0]
+    notes: >
+      Tender baby leaves prefer lower light; mature leaves benefit from higher DLI for thickness.
+
+  - name: mature
+    duration_days: [30, 60]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [14, 28]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 22]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest frequently for baby leaves; full-leaf spinach requires more light for larger leaves.

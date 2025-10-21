@@ -1,0 +1,46 @@
+latin_name: Eruca sativa
+common_name: Arugula
+family: Brassicaceae
+type: leafy green
+description: >
+  Arugula is a fast-growing, peppery salad green. It prefers cool to moderate temperatures and moderate light; very high heat causes bolting and increases pungency.
+
+stages:
+  - name: seedling
+    duration_days: [4, 10]
+    ppfd_umol_m2_s: [50, 150]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 22]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Fast turnover crop; sowing intervals of 7–14 days maintain continuous harvest. Cooler temps reduce bolting.
+
+  - name: vegetative
+    duration_days: [10, 25]
+    ppfd_umol_m2_s: [100, 300]
+    recommended_dli_mol_m2_day: [12, 20]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 24]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [1.0, 1.8]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest as baby leaves or larger; increased light intensifies pungency and leaf thickness.
+
+  - name: mature
+    duration_days: [20, 60]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [14, 28]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 26]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Warm temperatures accelerate bolting; provide shade or cooler environment to extend harvest window.

@@ -1,0 +1,46 @@
+latin_name: Brassica rapa subsp. narinosa
+common_name: Tatsoi
+family: Brassicaceae
+type: leafy green
+description: >
+  Tatsoi is a spoon-shaped Asian green, tolerant of cool conditions and suitable for baby leaf production.
+
+stages:
+  - name: seedling
+    duration_days: [6, 14]
+    ppfd_umol_m2_s: [50, 150]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 22]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Sweet, mild-flavored green used in salads and stir-fries.
+
+  - name: vegetative
+    duration_days: [12, 30]
+    ppfd_umol_m2_s: [100, 300]
+    recommended_dli_mol_m2_day: [12, 20]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 24]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [1.0, 1.8]
+    ph: [6.0, 7.0]
+    notes: >
+      Fast-growing; good for microgreens and baby leaf mixes.
+
+  - name: mature
+    duration_days: [20, 60]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [14, 30]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 24]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Keep well-watered for tender leaves.

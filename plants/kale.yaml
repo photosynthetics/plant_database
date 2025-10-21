@@ -1,0 +1,46 @@
+latin_name: Brassica oleracea var. sabellica
+common_name: Kale
+family: Brassicaceae
+type: leafy green
+description: >
+  Kale is a hardy leafy brassica that tolerates cooler temps and benefits from moderate to high light for thicker, more flavorful leaves.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [80, 200]
+    recommended_dli_mol_m2_day: [8, 18]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 22]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 1.8]
+    ph: [6.0, 7.5]
+    notes: >
+      Cold-tolerant; improved flavor after cool nights for some varieties.
+
+  - name: vegetative
+    duration_days: [25, 70]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [15, 35]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.4]
+    ph: [6.0, 7.5]
+    notes: >
+      Harvest outer leaves to allow continuous growth.
+
+  - name: mature
+    duration_days: [50, 180]
+    ppfd_umol_m2_s: [200, 600]
+    recommended_dli_mol_m2_day: [20, 45]
+    recommended_red_blue_ratio: [4, 8]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.4, 2.8]
+    ph: [6.0, 7.5]
+    notes: >
+      Frost can improve sweetness in some varieties.

@@ -1,0 +1,46 @@
+latin_name: Beta vulgaris subsp. cicla
+common_name: Swiss chard
+family: Amaranthaceae
+type: leafy green
+description: >
+  Swiss chard tolerates a wide range of light and temps; produces larger, thicker leaves under moderate to high light.
+
+stages:
+  - name: seedling
+    duration_days: [10, 20]
+    ppfd_umol_m2_s: [60, 180]
+    recommended_dli_mol_m2_day: [8, 15]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [10, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 1.8]
+    ph: [6.0, 7.0]
+    notes: >
+      Tolerant green, useful as cut-and-come-again or full harvest crop.
+
+  - name: vegetative
+    duration_days: [25, 60]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [15, 30]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [12, 28]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.2]
+    ph: [6.0, 7.0]
+    notes: >
+      High light increases leaf robustness and color.
+
+  - name: mature
+    duration_days: [40, 120]
+    ppfd_umol_m2_s: [200, 600]
+    recommended_dli_mol_m2_day: [20, 40]
+    recommended_red_blue_ratio: [4, 8]
+    co2_ppm: 400
+    optimal_temperature_c: [12, 30]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.4, 2.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest outer leaves for continuous production.

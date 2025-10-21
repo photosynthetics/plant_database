@@ -1,0 +1,46 @@
+latin_name: Beta vulgaris
+common_name: Beet greens
+family: Amaranthaceae
+type: leafy green
+description: >
+  Beet greens are grown for their leaves; similar culture to swiss chard and beets, tolerant of cool temps.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [50, 150]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 22]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 1.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest leaves early for tender greens; cooler temps favor quality.
+
+  - name: vegetative
+    duration_days: [20, 45]
+    ppfd_umol_m2_s: [100, 300]
+    recommended_dli_mol_m2_day: [12, 22]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [8, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Good cut-and-come-again crop; roots may be harvested later.
+
+  - name: mature
+    duration_days: [35, 90]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [14, 30]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [8, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.4, 2.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Leaves remain edible after root harvest; choose varieties for leaf quality.
