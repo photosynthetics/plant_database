@@ -1,0 +1,46 @@
+latin_name: Brassica rapa subsp. chinensis
+common_name: Bok choy
+family: Brassicaceae
+type: leafy green
+description: >
+  Bok choy (pak choi) is a vigorous, fast-growing Asian cabbage with succulent stems and dark green leaves. It prefers cool to moderate temperatures and responds well to moderate-high light for compact growth. Suitable for baby greens and full-head harvests.
+
+stages:
+  - name: seedling
+    duration_days: [5, 12]
+    ppfd_umol_m2_s: [75, 200]
+    recommended_dli_mol_m2_day: [8, 14]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [8, 22]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.9, 1.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Maintain even moisture; avoid dry conditions which can slow leaf expansion. Cooler temps slow growth but reduce bolting.
+
+  - name: vegetative
+    duration_days: [15, 35]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [12, 22]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [10, 24]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      For baby leaves, harvest early in the range; for full heads, provide higher light and consistent nutrients to promote thick stems.
+
+  - name: mature
+    duration_days: [30, 70]
+    ppfd_umol_m2_s: [200, 500]
+    recommended_dli_mol_m2_day: [18, 30]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [8, 26]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.4, 2.2]
+    ph: [6.0, 7.0]
+    notes: >
+      High light and adequate nutrients promote rapid stem thickening and head formation. Avoid high heat and long photoperiods which encourage bolting and poor texture.

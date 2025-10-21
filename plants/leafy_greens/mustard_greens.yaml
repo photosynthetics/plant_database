@@ -1,0 +1,47 @@
+latin_name: Brassica juncea
+common_name: Mustard greens
+alt_names: ["brown mustard", "leaf mustard"]
+family: Brassicaceae
+type: leafy green
+description: >
+  Mustard greens are fast-growing, flavorful brassicas with a peppery to pungent taste. They perform well in cool to moderate temperatures and respond to increased light with fuller leaves and stronger flavor. Many cultivars are grown for baby leaves or full-size harvests.
+
+stages:
+  - name: seedling
+    duration_days: [4, 12]
+    ppfd_umol_m2_s: [60, 180]
+    recommended_dli_mol_m2_day: [6, 14]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 20]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.9, 1.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Keep soil/substrate evenly moist for rapid leaf expansion; avoid water stress which can increase pungency.
+
+  - name: vegetative
+    duration_days: [10, 30]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [12, 22]
+    recommended_red_blue_ratio: [2, 5]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 24]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      For baby greens harvest earlier; higher light and nutrients promote robust, fuller leaves and may increase pungency.
+
+  - name: mature
+    duration_days: [25, 60]
+    ppfd_umol_m2_s: [200, 500]
+    recommended_dli_mol_m2_day: [16, 30]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 26]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.4, 2.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest under cool conditions for milder flavor; hot temperatures can cause bitterness and possible bolting. Many cultivars are tolerant of slightly warmer conditions but flavor will intensify.

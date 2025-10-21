@@ -1,0 +1,47 @@
+latin_name: Solanum lycopersicum
+common_name: Tomatoes
+varieties: ["cherry", "Tiny Tim", "Micro-Tom", "Red Robin"]
+family: Solanaceae
+type: fruiting plant
+description: >
+  Tomatoes require high light and warm temperatures for fruit set and sugar accumulation. Dwarf and micro varieties like Tiny Tim and Micro-Tom are well-suited to container and indoor production.
+
+stages:
+  - name: seedling
+    duration_days: [7, 21]
+    ppfd_umol_m2_s: [150, 300]
+    recommended_dli_mol_m2_day: [10, 25]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: [400, 800]
+    optimal_temperature_c: [18, 26]
+    photoperiod_hours: [12, 18]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [5.8, 6.5]
+    notes: >
+      Start under moderate light and increase intensity as plants establish. Maintain even moisture and avoid cold drafts.
+
+  - name: vegetative
+    duration_days: [21, 60]
+    ppfd_umol_m2_s: [250, 600]
+    recommended_dli_mol_m2_day: [20, 40]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: [400, 1000]
+    optimal_temperature_c: [20, 28]
+    photoperiod_hours: [12, 18]
+    ec_mS_cm: [1.6, 3.0]
+    ph: [5.8, 6.5]
+    notes: >
+      Provide support for vining varieties; increase light to promote compact, productive plants.
+
+  - name: flowering_fruiting
+    duration_days: [40, 120]
+    ppfd_umol_m2_s: [400, 800]
+    recommended_dli_mol_m2_day: [30, 60]
+    recommended_red_blue_ratio: [4, 8]
+    co2_ppm: [600, 1200]
+    optimal_temperature_c: [20, 30]
+    photoperiod_hours: [12, 18]
+    ec_mS_cm: [1.8, 3.5]
+    ph: [5.8, 6.5]
+    notes: >
+      High light and stable warm temps promote fruit set and sugar accumulation. Manage humidity to reduce disease risk; hand-pollinate or provide airflow for pollination in indoor settings.

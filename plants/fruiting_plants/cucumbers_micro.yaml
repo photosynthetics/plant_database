@@ -1,0 +1,33 @@
+latin_name: Cucumis sativus
+common_name: Mini cucumbers
+family: Cucurbitaceae
+type: fruiting plant
+description: >
+  Mini/micro cucumber varieties are bred for compact growth and small fruit suitable for container or vertical production. They require high light and consistent moisture for crisp, non-bitter fruit.
+
+stages:
+  - name: seedling
+    duration_days: [5, 14]
+    ppfd_umol_m2_s: [200, 350]
+    recommended_dli_mol_m2_day: [12, 30]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: [400, 800]
+    optimal_temperature_c: [18, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.4]
+    ph: [5.8, 6.8]
+    notes: >
+      Provide trellising or vertical support for vining types; pollination may be needed for fruit set in indoor systems.
+
+  - name: flowering_fruiting
+    duration_days: [35, 80]
+    ppfd_umol_m2_s: [400, 900]
+    recommended_dli_mol_m2_day: [30, 60]
+    recommended_red_blue_ratio: [4, 8]
+    co2_ppm: [600, 1200]
+    optimal_temperature_c: [20, 28]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.6, 3.0]
+    ph: [5.8, 6.8]
+    notes: >
+      Avoid water stress to prevent bitterness; high light promotes fruit set and firmness.

@@ -1,0 +1,47 @@
+latin_name: Capsicum spp.
+common_name: Peppers
+varieties: ["bell", "chili", "jalapeno", "mini sweet"]
+family: Solanaceae
+type: fruiting plant
+description: >
+  Peppers need high light and warm conditions for flowering and fruiting. Compact and mini varieties are ideal for indoor and container production.
+
+stages:
+  - name: seedling
+    duration_days: [7, 20]
+    ppfd_umol_m2_s: [150, 300]
+    recommended_dli_mol_m2_day: [10, 25]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: [400, 800]
+    optimal_temperature_c: [20, 28]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [5.5, 6.8]
+    notes: >
+      Warmth improves germination and early growth; avoid cold soil or air which slows development.
+
+  - name: vegetative
+    duration_days: [21, 60]
+    ppfd_umol_m2_s: [250, 600]
+    recommended_dli_mol_m2_day: [20, 40]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: [400, 1000]
+    optimal_temperature_c: [20, 30]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.6, 3.0]
+    ph: [5.5, 6.8]
+    notes: >
+      Provide consistent moisture and moderate fertilization; taller varieties may need staking.
+
+  - name: flowering_fruiting
+    duration_days: [50, 150]
+    ppfd_umol_m2_s: [400, 900]
+    recommended_dli_mol_m2_day: [30, 60]
+    recommended_red_blue_ratio: [4, 8]
+    co2_ppm: [600, 1200]
+    optimal_temperature_c: [20, 32]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.8, 3.5]
+    ph: [5.5, 6.8]
+    notes: >
+      High light, warm days and slightly cooler nights favor fruit set and color development; flowers can abort under stress.

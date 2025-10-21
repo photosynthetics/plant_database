@@ -1,0 +1,34 @@
+latin_name: Pisum sativum
+common_name: Pea shoots
+alt_names: ["pea microgreens", "pea shoots"]
+family: Fabaceae
+type: microgreen
+description: >
+  Pea shoots are tender shoots with a sweet, grassy flavor. They produce tall, vining microgreens typically harvested at 10–14 days and are commonly grown on hemp or soil mixes.
+
+stages:
+  - name: germination
+    duration_days: [2, 4]
+    ppfd_umol_m2_s: [0, 20]
+    recommended_dli_mol_m2_day: [0, 1]
+    recommended_red_blue_ratio: [1, 1]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 24]
+    photoperiod_hours: [0, 0]
+    ec_mS_cm: [0.0, 0.4]
+    ph: [5.5, 7.0]
+    notes: >
+      Keep trays moist and allow seeds to establish before exposing to full light; provide support or sufficient headroom for vining growth.
+
+  - name: growth
+    duration_days: [7, 18]
+    ppfd_umol_m2_s: [75, 180]
+    recommended_dli_mol_m2_day: [8, 20]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [16, 22]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.3, 1.0]
+    ph: [5.5, 7.0]
+    notes: >
+      Harvest when shoots reach desired height (usually 10–20 cm); ensure good air flow to reduce mold risks.

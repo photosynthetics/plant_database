@@ -1,0 +1,47 @@
+latin_name: Cichorium endivia var. crispum
+common_name: Frisée
+alt_names: ["curly endive", "frisée"]
+family: Asteraceae
+type: leafy green
+description: >
+  Frisée is a variety of endive with finely curled, frilly leaves and a slightly bitter, peppery flavor. It thrives in cool conditions and benefits from moderate to high light for crisp, well-developed fronds. Heat increases bitterness and can cause bolting.
+
+stages:
+  - name: seedling
+    duration_days: [6, 14]
+    ppfd_umol_m2_s: [60, 180]
+    recommended_dli_mol_m2_day: [6, 14]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [4, 18]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Keep substrate moist and cool; frisée seedlings appreciate steady moisture and cooler temps to promote compact growth.
+
+  - name: vegetative
+    duration_days: [20, 45]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [12, 22]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [6, 20]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.0, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Higher light encourages tighter, crisp fronds; watch for heat stress, which can make leaves more bitter.
+
+  - name: mature
+    duration_days: [35, 80]
+    ppfd_umol_m2_s: [200, 450]
+    recommended_dli_mol_m2_day: [16, 28]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [4, 22]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.2, 2.2]
+    ph: [6.0, 7.0]
+    notes: >
+      For milder flavor, harvest under cool conditions; frisée can be blanched to reduce bitterness, and providing shade during hot periods helps preserve texture.

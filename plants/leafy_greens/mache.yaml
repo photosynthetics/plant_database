@@ -1,0 +1,47 @@
+latin_name: Valerianella locusta
+common_name: Mâche
+alt_names: ["lamb's lettuce"]
+family: Caprifoliaceae
+type: leafy green
+description: >
+  Mâche (lamb's lettuce) is a small, tender winter salad green with a mild, nutty flavor. It prefers cool conditions and lower light relative to many salad greens, making it ideal for fall and winter production or low-light systems.
+
+stages:
+  - name: seedling
+    duration_days: [6, 14]
+    ppfd_umol_m2_s: [40, 120]
+    recommended_dli_mol_m2_day: [4, 10]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [2, 18]
+    photoperiod_hours: [8, 14]
+    ec_mS_cm: [0.6, 1.2]
+    ph: [6.0, 7.0]
+    notes: >
+      Slow to germinate in cool conditions; keep substrate moist but not waterlogged. Mâche tolerates low light and benefits from cooler night temperatures for compact growth.
+
+  - name: vegetative
+    duration_days: [20, 45]
+    ppfd_umol_m2_s: [60, 180]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [2, 20]
+    photoperiod_hours: [8, 14]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest as rosettes or baby leaves; avoid high heat which causes bolting and bitterness. Increased light can speed growth but may reduce tenderness.
+
+  - name: mature
+    duration_days: [40, 90]
+    ppfd_umol_m2_s: [80, 220]
+    recommended_dli_mol_m2_day: [8, 14]
+    recommended_red_blue_ratio: [2, 5]
+    co2_ppm: 400
+    optimal_temperature_c: [2, 22]
+    photoperiod_hours: [8, 14]
+    ec_mS_cm: [1.0, 1.8]
+    ph: [6.0, 7.0]
+    notes: >
+      Best quality in cool, stable conditions. Mâche is sensitive to prolonged high temperatures; provide shade or move to cooler conditions to maintain flavor and texture.

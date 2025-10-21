@@ -1,0 +1,33 @@
+latin_name: Brassica oleracea var. sabellica
+common_name: Kale microgreens
+family: Brassicaceae
+type: microgreen
+description: >
+  Kale microgreens are popular for their mild, leafy flavor and high nutritional content. Harvest typically at 7–14 days depending on desired leaf stage.
+
+stages:
+  - name: germination
+    duration_days: [1, 4]
+    ppfd_umol_m2_s: [0, 20]
+    recommended_dli_mol_m2_day: [0, 1]
+    recommended_red_blue_ratio: [1, 1]
+    co2_ppm: 400
+    optimal_temperature_c: [16, 22]
+    photoperiod_hours: [0, 0]
+    ec_mS_cm: [0.0, 0.4]
+    ph: [5.5, 6.5]
+    notes: >
+      Maintain high humidity early then increase air exchange as shoots emerge to reduce damping-off risk.
+
+  - name: growth
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [75, 160]
+    recommended_dli_mol_m2_day: [6, 16]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [16, 22]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.3, 0.9]
+    ph: [5.5, 6.5]
+    notes: >
+      Harvest when cotyledons and first true leaves are present for maximum yield and tender texture.

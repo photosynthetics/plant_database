@@ -1,0 +1,47 @@
+latin_name: Cichorium endivia
+common_name: Endive
+alt_names: ["curly endive", "frisée"]
+family: Asteraceae
+type: leafy green
+description: >
+  Endive (including curly endive or frisée) is a cool-season leafy green with curly, sometimes bitter leaves valued for texture and salad mixes. It prefers cool temperatures and moderate to high light for strong leaf development; bitterness increases with heat and stress.
+
+stages:
+  - name: seedling
+    duration_days: [6, 14]
+    ppfd_umol_m2_s: [60, 180]
+    recommended_dli_mol_m2_day: [6, 14]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 18]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Maintain even moisture; fluctuating moisture or high temperatures can increase bitterness later in growth.
+
+  - name: vegetative
+    duration_days: [20, 45]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [12, 22]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [6, 20]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.0, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Higher light promotes tighter, crisper leaves. Monitor temperature to avoid bolting and increased bitterness.
+
+  - name: mature
+    duration_days: [35, 80]
+    ppfd_umol_m2_s: [200, 450]
+    recommended_dli_mol_m2_day: [16, 28]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 22]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.2, 2.2]
+    ph: [6.0, 7.0]
+    notes: >
+      For milder flavor, harvest under cool conditions and avoid heat stress. Endive can be blanched (reduced light) in later stages to reduce bitterness if desired.
