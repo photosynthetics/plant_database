@@ -7,9 +7,9 @@ part of 'plant_model.dart';
 // **************************************************************************
 
 _PlantModel _$PlantModelFromJson(Map<String, dynamic> json) => _PlantModel(
-  latinName: json['latinName'] as String,
+  latinName: json['latinName'] as String? ?? '',
   commonName: json['commonName'] as String,
-  family: json['family'] as String,
+  family: json['family'] as String? ?? '',
   type: json['type'] as String,
   description: json['description'] as String,
   stages: (json['stages'] as List<dynamic>)
@@ -26,22 +26,6 @@ Map<String, dynamic> _$PlantModelToJson(_PlantModel instance) =>
       'description': instance.description,
       'stages': instance.stages,
     };
-
-_Growth _$GrowthFromJson(Map<String, dynamic> json) => _Growth(
-  optimalTemperatureC: json['optimalTemperatureC'] == null
-      ? null
-      : MinMax.fromJson(json['optimalTemperatureC'] as Map<String, dynamic>),
-  photoperiodHours: json['photoperiodHours'] == null
-      ? null
-      : MinMax.fromJson(json['photoperiodHours'] as Map<String, dynamic>),
-  co2Ppm: (json['co2Ppm'] as num?)?.toInt(),
-);
-
-Map<String, dynamic> _$GrowthToJson(_Growth instance) => <String, dynamic>{
-  'optimalTemperatureC': instance.optimalTemperatureC,
-  'photoperiodHours': instance.photoperiodHours,
-  'co2Ppm': instance.co2Ppm,
-};
 
 _Stage _$StageFromJson(Map<String, dynamic> json) => _Stage(
   name: json['name'] as String,

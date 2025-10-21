@@ -1,0 +1,46 @@
+latin_name: 
+common_name: Leafy Green (Medium Light)
+family: 
+type: generic
+description: >
+  A generic leafy green profile for moderate light environments — suitable for typical indoor grow setups and partial sun outdoors.
+
+stages:
+  - name: seedling
+    duration_days: [4, 9]
+    ppfd_umol_m2_s: [60, 180]
+    recommended_dli_mol_m2_day: [5, 10]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.9, 1.4]
+    ph: [5.5, 6.5]
+    notes: >
+      Balanced light encourages steady establishment; monitor moisture to avoid damping off.
+
+  - name: vegetative
+    duration_days: [12, 25]
+    ppfd_umol_m2_s: [200, 450]
+    recommended_dli_mol_m2_day: [12, 22]
+    recommended_red_blue_ratio: [3, 5]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [5.5, 6.5]
+    notes: >
+      Moderate to strong vegetative light produces compact, flavorful leaves; stagger feeding for best results.
+
+  - name: mature
+    duration_days: [25, 50]
+    ppfd_umol_m2_s: [350, 650]
+    recommended_dli_mol_m2_day: [18, 30]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.4, 2.4]
+    ph: [5.5, 6.5]
+    notes: >
+      Ideal conditions for quick growth and good leaf quality; monitor for heat stress under intense lamps.

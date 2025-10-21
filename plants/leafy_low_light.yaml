@@ -1,0 +1,46 @@
+latin_name: 
+common_name: Leafy Green (Low Light)
+family: 
+type: generic
+description: >
+  A generic leafy green profile suited for lower light conditions — ideal for shaded gardens or low-intensity indoor setups.
+
+stages:
+  - name: seedling
+    duration_days: [5, 10]
+    ppfd_umol_m2_s: [40, 120]
+    recommended_dli_mol_m2_day: [3, 6]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.2]
+    ph: [5.5, 6.5]
+    notes: >
+      Slow, steady growth under low light; avoid over-fertilization and provide consistent moisture.
+
+  - name: vegetative
+    duration_days: [14, 28]
+    ppfd_umol_m2_s: [80, 200]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [3, 5]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 1.6]
+    ph: [5.5, 6.5]
+    notes: >
+      Provide gentle airflow to prevent leggy growth; consider supplemental blue light for compactness.
+
+  - name: mature
+    duration_days: [30, 60]
+    ppfd_umol_m2_s: [150, 300]
+    recommended_dli_mol_m2_day: [8, 16]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [18, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [5.5, 6.5]
+    notes: >
+      Harvest when leaves reach desired size; avoid long periods of high humidity to reduce disease risk.
