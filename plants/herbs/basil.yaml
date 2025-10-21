@@ -23,7 +23,6 @@ stages:
     duration_days: [20, 40]
     ppfd_umol_m2_s: [150, 300]
     recommended_dli_mol_m2_day: [12, 18]
-
     recommended_red_blue_ratio: [3, 6]
     co2_ppm: 400
     optimal_temperature_c: [20, 30]
@@ -37,7 +36,6 @@ stages:
     duration_days: [40, 60]
     ppfd_umol_m2_s: [200, 400]
     recommended_dli_mol_m2_day: [18, 24]
-
     recommended_red_blue_ratio: [6, 12]
     co2_ppm: 400
     optimal_temperature_c: [20, 30]
