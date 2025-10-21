@@ -37,9 +37,9 @@ _Stage _$StageFromJson(Map<String, dynamic> json) => _Stage(
   recommendedRedBlueRatio: MinMax.fromJson(
     json['recommendedRedBlueRatio'] as Map<String, dynamic>,
   ),
-  recommendedFarRedPpfd: json['recommendedFarRedPpfd'] == null
+  recommendedFarRedPfd: json['recommendedFarRedPfd'] == null
       ? const MinMax(min: 0, max: 0)
-      : MinMax.fromJson(json['recommendedFarRedPpfd'] as Map<String, dynamic>),
+      : MinMax.fromJson(json['recommendedFarRedPfd'] as Map<String, dynamic>),
   optimalTemperatureC: MinMax.fromJson(
     json['optimalTemperatureC'] as Map<String, dynamic>,
   ),
@@ -58,7 +58,7 @@ Map<String, dynamic> _$StageToJson(_Stage instance) => <String, dynamic>{
   'ppfdUmolM2S': instance.ppfdUmolM2S,
   'recommendedDliMolM2Day': instance.recommendedDliMolM2Day,
   'recommendedRedBlueRatio': instance.recommendedRedBlueRatio,
-  'recommendedFarRedPpfd': instance.recommendedFarRedPpfd,
+  'recommendedFarRedPfd': instance.recommendedFarRedPfd,
   'optimalTemperatureC': instance.optimalTemperatureC,
   'photoperiodHours': instance.photoperiodHours,
   'co2Ppm': instance.co2Ppm,

@@ -299,7 +299,7 @@ as List<Stage>,
 /// @nodoc
 mixin _$Stage {
 
- String get name; MinMax get durationDays; MinMax get ppfdUmolM2S; MinMax get recommendedDliMolM2Day; MinMax get recommendedRedBlueRatio; MinMax get recommendedFarRedPpfd; MinMax get optimalTemperatureC; MinMax get photoperiodHours; int get co2Ppm; MinMax get ecMSCm; MinMax get ph; String? get notes;
+ String get name; MinMax get durationDays; MinMax get ppfdUmolM2S; MinMax get recommendedDliMolM2Day; MinMax get recommendedRedBlueRatio; MinMax get recommendedFarRedPfd; MinMax get optimalTemperatureC; MinMax get photoperiodHours; int get co2Ppm; MinMax get ecMSCm; MinMax get ph; String? get notes;
 /// Create a copy of Stage
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -312,16 +312,16 @@ $StageCopyWith<Stage> get copyWith => _$StageCopyWithImpl<Stage>(this as Stage, 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Stage&&(identical(other.name, name) || other.name == name)&&(identical(other.durationDays, durationDays) || other.durationDays == durationDays)&&(identical(other.ppfdUmolM2S, ppfdUmolM2S) || other.ppfdUmolM2S == ppfdUmolM2S)&&(identical(other.recommendedDliMolM2Day, recommendedDliMolM2Day) || other.recommendedDliMolM2Day == recommendedDliMolM2Day)&&(identical(other.recommendedRedBlueRatio, recommendedRedBlueRatio) || other.recommendedRedBlueRatio == recommendedRedBlueRatio)&&(identical(other.recommendedFarRedPpfd, recommendedFarRedPpfd) || other.recommendedFarRedPpfd == recommendedFarRedPpfd)&&(identical(other.optimalTemperatureC, optimalTemperatureC) || other.optimalTemperatureC == optimalTemperatureC)&&(identical(other.photoperiodHours, photoperiodHours) || other.photoperiodHours == photoperiodHours)&&(identical(other.co2Ppm, co2Ppm) || other.co2Ppm == co2Ppm)&&(identical(other.ecMSCm, ecMSCm) || other.ecMSCm == ecMSCm)&&(identical(other.ph, ph) || other.ph == ph)&&(identical(other.notes, notes) || other.notes == notes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Stage&&(identical(other.name, name) || other.name == name)&&(identical(other.durationDays, durationDays) || other.durationDays == durationDays)&&(identical(other.ppfdUmolM2S, ppfdUmolM2S) || other.ppfdUmolM2S == ppfdUmolM2S)&&(identical(other.recommendedDliMolM2Day, recommendedDliMolM2Day) || other.recommendedDliMolM2Day == recommendedDliMolM2Day)&&(identical(other.recommendedRedBlueRatio, recommendedRedBlueRatio) || other.recommendedRedBlueRatio == recommendedRedBlueRatio)&&(identical(other.recommendedFarRedPfd, recommendedFarRedPfd) || other.recommendedFarRedPfd == recommendedFarRedPfd)&&(identical(other.optimalTemperatureC, optimalTemperatureC) || other.optimalTemperatureC == optimalTemperatureC)&&(identical(other.photoperiodHours, photoperiodHours) || other.photoperiodHours == photoperiodHours)&&(identical(other.co2Ppm, co2Ppm) || other.co2Ppm == co2Ppm)&&(identical(other.ecMSCm, ecMSCm) || other.ecMSCm == ecMSCm)&&(identical(other.ph, ph) || other.ph == ph)&&(identical(other.notes, notes) || other.notes == notes));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,durationDays,ppfdUmolM2S,recommendedDliMolM2Day,recommendedRedBlueRatio,recommendedFarRedPpfd,optimalTemperatureC,photoperiodHours,co2Ppm,ecMSCm,ph,notes);
+int get hashCode => Object.hash(runtimeType,name,durationDays,ppfdUmolM2S,recommendedDliMolM2Day,recommendedRedBlueRatio,recommendedFarRedPfd,optimalTemperatureC,photoperiodHours,co2Ppm,ecMSCm,ph,notes);
 
 @override
 String toString() {
-  return 'Stage(name: $name, durationDays: $durationDays, ppfdUmolM2S: $ppfdUmolM2S, recommendedDliMolM2Day: $recommendedDliMolM2Day, recommendedRedBlueRatio: $recommendedRedBlueRatio, recommendedFarRedPpfd: $recommendedFarRedPpfd, optimalTemperatureC: $optimalTemperatureC, photoperiodHours: $photoperiodHours, co2Ppm: $co2Ppm, ecMSCm: $ecMSCm, ph: $ph, notes: $notes)';
+  return 'Stage(name: $name, durationDays: $durationDays, ppfdUmolM2S: $ppfdUmolM2S, recommendedDliMolM2Day: $recommendedDliMolM2Day, recommendedRedBlueRatio: $recommendedRedBlueRatio, recommendedFarRedPfd: $recommendedFarRedPfd, optimalTemperatureC: $optimalTemperatureC, photoperiodHours: $photoperiodHours, co2Ppm: $co2Ppm, ecMSCm: $ecMSCm, ph: $ph, notes: $notes)';
 }
 
 
@@ -332,11 +332,11 @@ abstract mixin class $StageCopyWith<$Res>  {
   factory $StageCopyWith(Stage value, $Res Function(Stage) _then) = _$StageCopyWithImpl;
 @useResult
 $Res call({
- String name, MinMax durationDays, MinMax ppfdUmolM2S, MinMax recommendedDliMolM2Day, MinMax recommendedRedBlueRatio, MinMax recommendedFarRedPpfd, MinMax optimalTemperatureC, MinMax photoperiodHours, int co2Ppm, MinMax ecMSCm, MinMax ph, String? notes
+ String name, MinMax durationDays, MinMax ppfdUmolM2S, MinMax recommendedDliMolM2Day, MinMax recommendedRedBlueRatio, MinMax recommendedFarRedPfd, MinMax optimalTemperatureC, MinMax photoperiodHours, int co2Ppm, MinMax ecMSCm, MinMax ph, String? notes
 });
 
 
-$MinMaxCopyWith<$Res> get durationDays;$MinMaxCopyWith<$Res> get ppfdUmolM2S;$MinMaxCopyWith<$Res> get recommendedDliMolM2Day;$MinMaxCopyWith<$Res> get recommendedRedBlueRatio;$MinMaxCopyWith<$Res> get recommendedFarRedPpfd;$MinMaxCopyWith<$Res> get optimalTemperatureC;$MinMaxCopyWith<$Res> get photoperiodHours;$MinMaxCopyWith<$Res> get ecMSCm;$MinMaxCopyWith<$Res> get ph;
+$MinMaxCopyWith<$Res> get durationDays;$MinMaxCopyWith<$Res> get ppfdUmolM2S;$MinMaxCopyWith<$Res> get recommendedDliMolM2Day;$MinMaxCopyWith<$Res> get recommendedRedBlueRatio;$MinMaxCopyWith<$Res> get recommendedFarRedPfd;$MinMaxCopyWith<$Res> get optimalTemperatureC;$MinMaxCopyWith<$Res> get photoperiodHours;$MinMaxCopyWith<$Res> get ecMSCm;$MinMaxCopyWith<$Res> get ph;
 
 }
 /// @nodoc
@@ -349,14 +349,14 @@ class _$StageCopyWithImpl<$Res>
 
 /// Create a copy of Stage
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? durationDays = null,Object? ppfdUmolM2S = null,Object? recommendedDliMolM2Day = null,Object? recommendedRedBlueRatio = null,Object? recommendedFarRedPpfd = null,Object? optimalTemperatureC = null,Object? photoperiodHours = null,Object? co2Ppm = null,Object? ecMSCm = null,Object? ph = null,Object? notes = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? durationDays = null,Object? ppfdUmolM2S = null,Object? recommendedDliMolM2Day = null,Object? recommendedRedBlueRatio = null,Object? recommendedFarRedPfd = null,Object? optimalTemperatureC = null,Object? photoperiodHours = null,Object? co2Ppm = null,Object? ecMSCm = null,Object? ph = null,Object? notes = freezed,}) {
   return _then(_self.copyWith(
 name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,durationDays: null == durationDays ? _self.durationDays : durationDays // ignore: cast_nullable_to_non_nullable
 as MinMax,ppfdUmolM2S: null == ppfdUmolM2S ? _self.ppfdUmolM2S : ppfdUmolM2S // ignore: cast_nullable_to_non_nullable
 as MinMax,recommendedDliMolM2Day: null == recommendedDliMolM2Day ? _self.recommendedDliMolM2Day : recommendedDliMolM2Day // ignore: cast_nullable_to_non_nullable
 as MinMax,recommendedRedBlueRatio: null == recommendedRedBlueRatio ? _self.recommendedRedBlueRatio : recommendedRedBlueRatio // ignore: cast_nullable_to_non_nullable
-as MinMax,recommendedFarRedPpfd: null == recommendedFarRedPpfd ? _self.recommendedFarRedPpfd : recommendedFarRedPpfd // ignore: cast_nullable_to_non_nullable
+as MinMax,recommendedFarRedPfd: null == recommendedFarRedPfd ? _self.recommendedFarRedPfd : recommendedFarRedPfd // ignore: cast_nullable_to_non_nullable
 as MinMax,optimalTemperatureC: null == optimalTemperatureC ? _self.optimalTemperatureC : optimalTemperatureC // ignore: cast_nullable_to_non_nullable
 as MinMax,photoperiodHours: null == photoperiodHours ? _self.photoperiodHours : photoperiodHours // ignore: cast_nullable_to_non_nullable
 as MinMax,co2Ppm: null == co2Ppm ? _self.co2Ppm : co2Ppm // ignore: cast_nullable_to_non_nullable
@@ -406,10 +406,10 @@ $MinMaxCopyWith<$Res> get recommendedRedBlueRatio {
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$MinMaxCopyWith<$Res> get recommendedFarRedPpfd {
+$MinMaxCopyWith<$Res> get recommendedFarRedPfd {
   
-  return $MinMaxCopyWith<$Res>(_self.recommendedFarRedPpfd, (value) {
-    return _then(_self.copyWith(recommendedFarRedPpfd: value));
+  return $MinMaxCopyWith<$Res>(_self.recommendedFarRedPfd, (value) {
+    return _then(_self.copyWith(recommendedFarRedPfd: value));
   });
 }/// Create a copy of Stage
 /// with the given fields replaced by the non-null parameter values.
@@ -529,10 +529,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  MinMax durationDays,  MinMax ppfdUmolM2S,  MinMax recommendedDliMolM2Day,  MinMax recommendedRedBlueRatio,  MinMax recommendedFarRedPpfd,  MinMax optimalTemperatureC,  MinMax photoperiodHours,  int co2Ppm,  MinMax ecMSCm,  MinMax ph,  String? notes)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  MinMax durationDays,  MinMax ppfdUmolM2S,  MinMax recommendedDliMolM2Day,  MinMax recommendedRedBlueRatio,  MinMax recommendedFarRedPfd,  MinMax optimalTemperatureC,  MinMax photoperiodHours,  int co2Ppm,  MinMax ecMSCm,  MinMax ph,  String? notes)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Stage() when $default != null:
-return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommendedDliMolM2Day,_that.recommendedRedBlueRatio,_that.recommendedFarRedPpfd,_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm,_that.ecMSCm,_that.ph,_that.notes);case _:
+return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommendedDliMolM2Day,_that.recommendedRedBlueRatio,_that.recommendedFarRedPfd,_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm,_that.ecMSCm,_that.ph,_that.notes);case _:
   return orElse();
 
 }
@@ -550,10 +550,10 @@ return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommende
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  MinMax durationDays,  MinMax ppfdUmolM2S,  MinMax recommendedDliMolM2Day,  MinMax recommendedRedBlueRatio,  MinMax recommendedFarRedPpfd,  MinMax optimalTemperatureC,  MinMax photoperiodHours,  int co2Ppm,  MinMax ecMSCm,  MinMax ph,  String? notes)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  MinMax durationDays,  MinMax ppfdUmolM2S,  MinMax recommendedDliMolM2Day,  MinMax recommendedRedBlueRatio,  MinMax recommendedFarRedPfd,  MinMax optimalTemperatureC,  MinMax photoperiodHours,  int co2Ppm,  MinMax ecMSCm,  MinMax ph,  String? notes)  $default,) {final _that = this;
 switch (_that) {
 case _Stage():
-return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommendedDliMolM2Day,_that.recommendedRedBlueRatio,_that.recommendedFarRedPpfd,_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm,_that.ecMSCm,_that.ph,_that.notes);case _:
+return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommendedDliMolM2Day,_that.recommendedRedBlueRatio,_that.recommendedFarRedPfd,_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm,_that.ecMSCm,_that.ph,_that.notes);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -570,10 +570,10 @@ return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommende
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  MinMax durationDays,  MinMax ppfdUmolM2S,  MinMax recommendedDliMolM2Day,  MinMax recommendedRedBlueRatio,  MinMax recommendedFarRedPpfd,  MinMax optimalTemperatureC,  MinMax photoperiodHours,  int co2Ppm,  MinMax ecMSCm,  MinMax ph,  String? notes)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  MinMax durationDays,  MinMax ppfdUmolM2S,  MinMax recommendedDliMolM2Day,  MinMax recommendedRedBlueRatio,  MinMax recommendedFarRedPfd,  MinMax optimalTemperatureC,  MinMax photoperiodHours,  int co2Ppm,  MinMax ecMSCm,  MinMax ph,  String? notes)?  $default,) {final _that = this;
 switch (_that) {
 case _Stage() when $default != null:
-return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommendedDliMolM2Day,_that.recommendedRedBlueRatio,_that.recommendedFarRedPpfd,_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm,_that.ecMSCm,_that.ph,_that.notes);case _:
+return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommendedDliMolM2Day,_that.recommendedRedBlueRatio,_that.recommendedFarRedPfd,_that.optimalTemperatureC,_that.photoperiodHours,_that.co2Ppm,_that.ecMSCm,_that.ph,_that.notes);case _:
   return null;
 
 }
@@ -585,7 +585,7 @@ return $default(_that.name,_that.durationDays,_that.ppfdUmolM2S,_that.recommende
 @JsonSerializable()
 
 class _Stage extends Stage {
-  const _Stage({required this.name, required this.durationDays, required this.ppfdUmolM2S, required this.recommendedDliMolM2Day, required this.recommendedRedBlueRatio, this.recommendedFarRedPpfd = const MinMax(min: 0, max: 0), required this.optimalTemperatureC, required this.photoperiodHours, required this.co2Ppm, required this.ecMSCm, required this.ph, this.notes}): super._();
+  const _Stage({required this.name, required this.durationDays, required this.ppfdUmolM2S, required this.recommendedDliMolM2Day, required this.recommendedRedBlueRatio, this.recommendedFarRedPfd = const MinMax(min: 0, max: 0), required this.optimalTemperatureC, required this.photoperiodHours, required this.co2Ppm, required this.ecMSCm, required this.ph, this.notes}): super._();
   factory _Stage.fromJson(Map<String, dynamic> json) => _$StageFromJson(json);
 
 @override final  String name;
@@ -593,7 +593,7 @@ class _Stage extends Stage {
 @override final  MinMax ppfdUmolM2S;
 @override final  MinMax recommendedDliMolM2Day;
 @override final  MinMax recommendedRedBlueRatio;
-@override@JsonKey() final  MinMax recommendedFarRedPpfd;
+@override@JsonKey() final  MinMax recommendedFarRedPfd;
 @override final  MinMax optimalTemperatureC;
 @override final  MinMax photoperiodHours;
 @override final  int co2Ppm;
@@ -614,16 +614,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Stage&&(identical(other.name, name) || other.name == name)&&(identical(other.durationDays, durationDays) || other.durationDays == durationDays)&&(identical(other.ppfdUmolM2S, ppfdUmolM2S) || other.ppfdUmolM2S == ppfdUmolM2S)&&(identical(other.recommendedDliMolM2Day, recommendedDliMolM2Day) || other.recommendedDliMolM2Day == recommendedDliMolM2Day)&&(identical(other.recommendedRedBlueRatio, recommendedRedBlueRatio) || other.recommendedRedBlueRatio == recommendedRedBlueRatio)&&(identical(other.recommendedFarRedPpfd, recommendedFarRedPpfd) || other.recommendedFarRedPpfd == recommendedFarRedPpfd)&&(identical(other.optimalTemperatureC, optimalTemperatureC) || other.optimalTemperatureC == optimalTemperatureC)&&(identical(other.photoperiodHours, photoperiodHours) || other.photoperiodHours == photoperiodHours)&&(identical(other.co2Ppm, co2Ppm) || other.co2Ppm == co2Ppm)&&(identical(other.ecMSCm, ecMSCm) || other.ecMSCm == ecMSCm)&&(identical(other.ph, ph) || other.ph == ph)&&(identical(other.notes, notes) || other.notes == notes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Stage&&(identical(other.name, name) || other.name == name)&&(identical(other.durationDays, durationDays) || other.durationDays == durationDays)&&(identical(other.ppfdUmolM2S, ppfdUmolM2S) || other.ppfdUmolM2S == ppfdUmolM2S)&&(identical(other.recommendedDliMolM2Day, recommendedDliMolM2Day) || other.recommendedDliMolM2Day == recommendedDliMolM2Day)&&(identical(other.recommendedRedBlueRatio, recommendedRedBlueRatio) || other.recommendedRedBlueRatio == recommendedRedBlueRatio)&&(identical(other.recommendedFarRedPfd, recommendedFarRedPfd) || other.recommendedFarRedPfd == recommendedFarRedPfd)&&(identical(other.optimalTemperatureC, optimalTemperatureC) || other.optimalTemperatureC == optimalTemperatureC)&&(identical(other.photoperiodHours, photoperiodHours) || other.photoperiodHours == photoperiodHours)&&(identical(other.co2Ppm, co2Ppm) || other.co2Ppm == co2Ppm)&&(identical(other.ecMSCm, ecMSCm) || other.ecMSCm == ecMSCm)&&(identical(other.ph, ph) || other.ph == ph)&&(identical(other.notes, notes) || other.notes == notes));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,durationDays,ppfdUmolM2S,recommendedDliMolM2Day,recommendedRedBlueRatio,recommendedFarRedPpfd,optimalTemperatureC,photoperiodHours,co2Ppm,ecMSCm,ph,notes);
+int get hashCode => Object.hash(runtimeType,name,durationDays,ppfdUmolM2S,recommendedDliMolM2Day,recommendedRedBlueRatio,recommendedFarRedPfd,optimalTemperatureC,photoperiodHours,co2Ppm,ecMSCm,ph,notes);
 
 @override
 String toString() {
-  return 'Stage(name: $name, durationDays: $durationDays, ppfdUmolM2S: $ppfdUmolM2S, recommendedDliMolM2Day: $recommendedDliMolM2Day, recommendedRedBlueRatio: $recommendedRedBlueRatio, recommendedFarRedPpfd: $recommendedFarRedPpfd, optimalTemperatureC: $optimalTemperatureC, photoperiodHours: $photoperiodHours, co2Ppm: $co2Ppm, ecMSCm: $ecMSCm, ph: $ph, notes: $notes)';
+  return 'Stage(name: $name, durationDays: $durationDays, ppfdUmolM2S: $ppfdUmolM2S, recommendedDliMolM2Day: $recommendedDliMolM2Day, recommendedRedBlueRatio: $recommendedRedBlueRatio, recommendedFarRedPfd: $recommendedFarRedPfd, optimalTemperatureC: $optimalTemperatureC, photoperiodHours: $photoperiodHours, co2Ppm: $co2Ppm, ecMSCm: $ecMSCm, ph: $ph, notes: $notes)';
 }
 
 
@@ -634,11 +634,11 @@ abstract mixin class _$StageCopyWith<$Res> implements $StageCopyWith<$Res> {
   factory _$StageCopyWith(_Stage value, $Res Function(_Stage) _then) = __$StageCopyWithImpl;
 @override @useResult
 $Res call({
- String name, MinMax durationDays, MinMax ppfdUmolM2S, MinMax recommendedDliMolM2Day, MinMax recommendedRedBlueRatio, MinMax recommendedFarRedPpfd, MinMax optimalTemperatureC, MinMax photoperiodHours, int co2Ppm, MinMax ecMSCm, MinMax ph, String? notes
+ String name, MinMax durationDays, MinMax ppfdUmolM2S, MinMax recommendedDliMolM2Day, MinMax recommendedRedBlueRatio, MinMax recommendedFarRedPfd, MinMax optimalTemperatureC, MinMax photoperiodHours, int co2Ppm, MinMax ecMSCm, MinMax ph, String? notes
 });
 
 
-@override $MinMaxCopyWith<$Res> get durationDays;@override $MinMaxCopyWith<$Res> get ppfdUmolM2S;@override $MinMaxCopyWith<$Res> get recommendedDliMolM2Day;@override $MinMaxCopyWith<$Res> get recommendedRedBlueRatio;@override $MinMaxCopyWith<$Res> get recommendedFarRedPpfd;@override $MinMaxCopyWith<$Res> get optimalTemperatureC;@override $MinMaxCopyWith<$Res> get photoperiodHours;@override $MinMaxCopyWith<$Res> get ecMSCm;@override $MinMaxCopyWith<$Res> get ph;
+@override $MinMaxCopyWith<$Res> get durationDays;@override $MinMaxCopyWith<$Res> get ppfdUmolM2S;@override $MinMaxCopyWith<$Res> get recommendedDliMolM2Day;@override $MinMaxCopyWith<$Res> get recommendedRedBlueRatio;@override $MinMaxCopyWith<$Res> get recommendedFarRedPfd;@override $MinMaxCopyWith<$Res> get optimalTemperatureC;@override $MinMaxCopyWith<$Res> get photoperiodHours;@override $MinMaxCopyWith<$Res> get ecMSCm;@override $MinMaxCopyWith<$Res> get ph;
 
 }
 /// @nodoc
@@ -651,14 +651,14 @@ class __$StageCopyWithImpl<$Res>
 
 /// Create a copy of Stage
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? durationDays = null,Object? ppfdUmolM2S = null,Object? recommendedDliMolM2Day = null,Object? recommendedRedBlueRatio = null,Object? recommendedFarRedPpfd = null,Object? optimalTemperatureC = null,Object? photoperiodHours = null,Object? co2Ppm = null,Object? ecMSCm = null,Object? ph = null,Object? notes = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? durationDays = null,Object? ppfdUmolM2S = null,Object? recommendedDliMolM2Day = null,Object? recommendedRedBlueRatio = null,Object? recommendedFarRedPfd = null,Object? optimalTemperatureC = null,Object? photoperiodHours = null,Object? co2Ppm = null,Object? ecMSCm = null,Object? ph = null,Object? notes = freezed,}) {
   return _then(_Stage(
 name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,durationDays: null == durationDays ? _self.durationDays : durationDays // ignore: cast_nullable_to_non_nullable
 as MinMax,ppfdUmolM2S: null == ppfdUmolM2S ? _self.ppfdUmolM2S : ppfdUmolM2S // ignore: cast_nullable_to_non_nullable
 as MinMax,recommendedDliMolM2Day: null == recommendedDliMolM2Day ? _self.recommendedDliMolM2Day : recommendedDliMolM2Day // ignore: cast_nullable_to_non_nullable
 as MinMax,recommendedRedBlueRatio: null == recommendedRedBlueRatio ? _self.recommendedRedBlueRatio : recommendedRedBlueRatio // ignore: cast_nullable_to_non_nullable
-as MinMax,recommendedFarRedPpfd: null == recommendedFarRedPpfd ? _self.recommendedFarRedPpfd : recommendedFarRedPpfd // ignore: cast_nullable_to_non_nullable
+as MinMax,recommendedFarRedPfd: null == recommendedFarRedPfd ? _self.recommendedFarRedPfd : recommendedFarRedPfd // ignore: cast_nullable_to_non_nullable
 as MinMax,optimalTemperatureC: null == optimalTemperatureC ? _self.optimalTemperatureC : optimalTemperatureC // ignore: cast_nullable_to_non_nullable
 as MinMax,photoperiodHours: null == photoperiodHours ? _self.photoperiodHours : photoperiodHours // ignore: cast_nullable_to_non_nullable
 as MinMax,co2Ppm: null == co2Ppm ? _self.co2Ppm : co2Ppm // ignore: cast_nullable_to_non_nullable
@@ -709,10 +709,10 @@ $MinMaxCopyWith<$Res> get recommendedRedBlueRatio {
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$MinMaxCopyWith<$Res> get recommendedFarRedPpfd {
+$MinMaxCopyWith<$Res> get recommendedFarRedPfd {
   
-  return $MinMaxCopyWith<$Res>(_self.recommendedFarRedPpfd, (value) {
-    return _then(_self.copyWith(recommendedFarRedPpfd: value));
+  return $MinMaxCopyWith<$Res>(_self.recommendedFarRedPfd, (value) {
+    return _then(_self.copyWith(recommendedFarRedPfd: value));
   });
 }/// Create a copy of Stage
 /// with the given fields replaced by the non-null parameter values.

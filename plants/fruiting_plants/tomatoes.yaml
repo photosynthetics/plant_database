@@ -10,7 +10,7 @@ stages:
   - name: seedling
     duration_days: [7, 21]
     ppfd_umol_m2_s: [150, 300]
-    recommended_far_red_ppfd: [3, 18]
+    recommended_far_red_pfd: [3, 18]
     recommended_dli_mol_m2_day: [10, 25]
     recommended_red_blue_ratio: [3, 6]
     co2_ppm: 600
@@ -24,7 +24,7 @@ stages:
   - name: vegetative
     duration_days: [21, 60]
     ppfd_umol_m2_s: [250, 600]
-    recommended_far_red_ppfd: [7.5, 48]
+    recommended_far_red_pfd: [7.5, 48]
     recommended_dli_mol_m2_day: [20, 40]
     recommended_red_blue_ratio: [3, 6]
     co2_ppm: 700
@@ -38,7 +38,7 @@ stages:
   - name: flowering_fruiting
     duration_days: [40, 120]
     ppfd_umol_m2_s: [400, 800]
-    recommended_far_red_ppfd: [16, 80]
+    recommended_far_red_pfd: [16, 80]
     recommended_dli_mol_m2_day: [30, 60]
     recommended_red_blue_ratio: [4, 8]
     co2_ppm: 900

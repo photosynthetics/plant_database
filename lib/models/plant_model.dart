@@ -64,7 +64,7 @@ abstract class Stage with _$Stage {
     required MinMax ppfdUmolM2S,
     required MinMax recommendedDliMolM2Day,
     required MinMax recommendedRedBlueRatio,
-    @Default(MinMax(min: 0, max: 0)) MinMax recommendedFarRedPpfd,
+    @Default(MinMax(min: 0, max: 0)) MinMax recommendedFarRedPfd,
     required MinMax optimalTemperatureC,
     required MinMax photoperiodHours,
     required int co2Ppm,
@@ -147,6 +147,8 @@ abstract class MinMax with _$MinMax {
     if (index == 1) return max;
     throw RangeError.index(index, this, 'Index out of range: $index');
   }
-
   bool get isValid => (!(min.isNaN || max.isNaN) && min <= max) && !(min == 0 && max == 0);
+
+  double get average => isValid ? (min + max) / 2.0 : 0.0;
+
 }

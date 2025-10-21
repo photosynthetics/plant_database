@@ -10,7 +10,7 @@ stages:
   - name: vegetative
     duration_days: [21, 60]
     ppfd_umol_m2_s: [200, 400]
-    recommended_far_red_ppfd: [6, 32]
+    recommended_far_red_pfd: [6, 32]
     recommended_dli_mol_m2_day: [12, 30]
     recommended_red_blue_ratio: [3, 6]
     co2_ppm: 600
@@ -24,7 +24,7 @@ stages:
   - name: flowering_fruiting
     duration_days: [60, 180]
     ppfd_umol_m2_s: [400, 800]
-    recommended_far_red_ppfd: [16, 80]
+    recommended_far_red_pfd: [16, 80]
     recommended_dli_mol_m2_day: [30, 60]
     recommended_red_blue_ratio: [3, 6]
     co2_ppm: 700
