@@ -1,0 +1,46 @@
+latin_name: Brassica rapa var. japonica
+common_name: Mizuna
+family: Brassicaceae
+type: leafy green
+description: >
+  Mizuna is a tender, mildly peppery Japanese mustard green. It is fast-growing and adaptable to a range of light and temperature conditions, preferring cool to moderate temperatures. It performs well as baby greens and in mixed salad mixes.
+
+stages:
+  - name: seedling
+    duration_days: [4, 12]
+    ppfd_umol_m2_s: [50, 150]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 20]
+    photoperiod_hours: [10, 14]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Quick germination and establishment; maintain even moisture to avoid stress. Cooler temperatures reduce bolting tendency.
+
+  - name: vegetative
+    duration_days: [10, 30]
+    ppfd_umol_m2_s: [100, 300]
+    recommended_dli_mol_m2_day: [10, 18]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 22]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.0, 1.8]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest as baby leaves at the lower end or allow to reach mature leaf size. Increased light improves leaf color and compactness.
+
+  - name: mature
+    duration_days: [25, 60]
+    ppfd_umol_m2_s: [150, 400]
+    recommended_dli_mol_m2_day: [14, 24]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [5, 26]
+    photoperiod_hours: [10, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Mizuna tolerates slightly warmer conditions than some brassicas but will bolt in high heat or long photoperiods; shade or shorter photoperiods help extend harvest window.
