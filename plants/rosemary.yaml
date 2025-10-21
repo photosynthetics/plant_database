@@ -1,0 +1,46 @@
+latin_name: Salvia rosmarinus
+common_name: Rosemary
+family: Lamiaceae
+type: herb
+description: >
+  Rosemary prefers bright light and relatively dry, well-drained soils; it thrives in high-light situations.
+
+stages:
+  - name: seedling
+    duration_days: [14, 28]
+    ppfd_umol_m2_s: [100, 250]
+    recommended_dli_mol_m2_day: [10, 20]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.6]
+    ph: [6.0, 7.5]
+    notes: >
+      Slow to establish from seed; prefers warm, sunny conditions.
+
+  - name: vegetative
+    duration_days: [60, 180]
+    ppfd_umol_m2_s: [300, 700]
+    recommended_dli_mol_m2_day: [25, 40]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 28]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 2.2]
+    ph: [6.0, 7.5]
+    notes: >
+      Drought tolerant once established; avoid overwatering.
+
+  - name: mature
+    duration_days: [180, 720]
+    ppfd_umol_m2_s: [400, 1000]
+    recommended_dli_mol_m2_day: [30, 50]
+    recommended_red_blue_ratio: [4, 8]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 30]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 3.0]
+    ph: [6.0, 7.5]
+    notes: >
+      Hardy shrub; takes well to container culture under bright light.

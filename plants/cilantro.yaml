@@ -1,0 +1,46 @@
+latin_name: Coriandrum sativum
+common_name: Cilantro
+family: Apiaceae
+type: herb
+description: >
+  Cilantro (coriander leaves) prefers cooler temperatures and moderate light; bolts quickly in hot, bright conditions.
+
+stages:
+  - name: seedling
+    duration_days: [5, 12]
+    ppfd_umol_m2_s: [50, 150]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [10, 22]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Cilantro prefers cool conditions; avoid high temperatures to reduce bolting.
+
+  - name: vegetative
+    duration_days: [14, 28]
+    ppfd_umol_m2_s: [150, 300]
+    recommended_dli_mol_m2_day: [10, 20]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [12, 22]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 1.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Provide moderate light and keep roots cool; succession sowing works well.
+
+  - name: mature
+    duration_days: [25, 50]
+    ppfd_umol_m2_s: [200, 450]
+    recommended_dli_mol_m2_day: [15, 28]
+    recommended_red_blue_ratio: [3, 5]
+    co2_ppm: 400
+    optimal_temperature_c: [12, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest leaves frequently; bolt-resistant varieties can tolerate slightly higher temps.

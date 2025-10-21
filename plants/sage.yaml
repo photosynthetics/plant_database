@@ -1,0 +1,47 @@
+latin_name: Salvia officinalis
+common_name: Sage
+family: Lamiaceae
+type: herb
+description: >
+  Sage is a woody perennial that prefers strong light and well-drained soil; it concentrates aromatic oils under higher light.
+
+stages:
+  - name: seedling
+    duration_days: [10, 20]
+    ppfd_umol_m2_s: [80, 200]
+    recommended_dli_mol_m2_day: [8, 18]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [12, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.6]
+    ph: [6.0, 7.5]
+    notes: >
+      Keep soil on the drier side; sage benefits from bright, sunny conditions.
+
+  - name: vegetative
+    duration_days: [30, 60]
+    ppfd_umol_m2_s: [250, 600]
+    recommended_dli_mol_m2_day: [18, 35]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 28]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 2.0]
+    ph: [6.0, 7.5]
+    notes: >
+      Prune annual growth to maintain shape and encourage bushiness.
+
+  - name: mature
+    duration_days: [60, 240]
+    ppfd_umol_m2_s: [300, 800]
+    recommended_dli_mol_m2_day: [25, 45]
+    recommended_red_blue_ratio: [4, 8]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 30]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.4]
+    ph: [6.0, 7.5]
+    notes: >
+      Slow-growing woody herb; harvest leaves as needed.
+

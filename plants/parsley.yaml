@@ -1,0 +1,46 @@
+latin_name: Petroselinum crispum
+common_name: Parsley
+family: Apiaceae
+type: herb
+description: >
+  Parsley is a cool-season herb that prefers moderate light and steady moisture. It performs well indoors and outdoors.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [50, 150]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 22]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Parsley benefits from cooler temps and consistent moisture; slow to germinate, be patient.
+
+  - name: vegetative
+    duration_days: [20, 40]
+    ppfd_umol_m2_s: [150, 350]
+    recommended_dli_mol_m2_day: [12, 22]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 1.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Avoid high heat; provide steady feeding for lush leaf production.
+
+  - name: mature
+    duration_days: [40, 90]
+    ppfd_umol_m2_s: [200, 450]
+    recommended_dli_mol_m2_day: [18, 28]
+    recommended_red_blue_ratio: [3, 5]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest outer leaves regularly to encourage new growth.

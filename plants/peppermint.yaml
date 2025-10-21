@@ -1,0 +1,46 @@
+latin_name: Mentha x piperita
+common_name: Peppermint
+family: Lamiaceae
+type: herb
+description: >
+  Peppermint is a menthol-rich hybrid mint that prefers moderate light and cool, moist conditions.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [50, 150]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [10, 22]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.5]
+    notes: >
+      Prefers moist soils and partial shade in hot climates.
+
+  - name: vegetative
+    duration_days: [20, 40]
+    ppfd_umol_m2_s: [150, 350]
+    recommended_dli_mol_m2_day: [12, 24]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [10, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 1.8]
+    ph: [6.0, 7.5]
+    notes: >
+      Regular pruning prevents legginess and promotes dense growth.
+
+  - name: mature
+    duration_days: [40, 180]
+    ppfd_umol_m2_s: [200, 600]
+    recommended_dli_mol_m2_day: [15, 35]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [10, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.4]
+    ph: [6.0, 7.5]
+    notes: >
+      Flavor intensity can vary with light and temperature; cooler conditions preserve volatile oils.

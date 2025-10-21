@@ -1,0 +1,46 @@
+latin_name: Origanum vulgare
+common_name: Oregano
+family: Lamiaceae
+type: herb
+description: >
+  Oregano prefers full sun or strong indoor lighting and well-drained soil. It concentrates flavor under higher light.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [80, 180]
+    recommended_dli_mol_m2_day: [8, 16]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 26]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 8.0]
+    notes: >
+      Oregano benefits from warm days and cooler nights to concentrate oils.
+
+  - name: vegetative
+    duration_days: [25, 50]
+    ppfd_umol_m2_s: [250, 600]
+    recommended_dli_mol_m2_day: [18, 35]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 28]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 2.0]
+    ph: [6.0, 8.0]
+    notes: >
+      Prune to keep compact; higher light improves essential oil content.
+
+  - name: mature
+    duration_days: [50, 180]
+    ppfd_umol_m2_s: [300, 800]
+    recommended_dli_mol_m2_day: [25, 45]
+    recommended_red_blue_ratio: [4, 8]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 30]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.4]
+    ph: [6.0, 8.0]
+    notes: >
+      Flowering stems can be harvested for dried herbs; high light favors oil production.

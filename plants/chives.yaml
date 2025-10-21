@@ -1,0 +1,46 @@
+latin_name: Allium schoenoprasum
+common_name: Chives
+family: Amaryllidaceae
+type: herb
+description: >
+  Chives are a hardy perennial with mild onion flavor; they tolerate lower light than many herbs but prefer moderate light for best flavor.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [50, 150]
+    recommended_dli_mol_m2_day: [6, 12]
+    recommended_red_blue_ratio: [1, 2]
+    co2_ppm: 400
+    optimal_temperature_c: [10, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Chives recover well from regular harvest; provide good drainage.
+
+  - name: vegetative
+    duration_days: [20, 40]
+    ppfd_umol_m2_s: [150, 350]
+    recommended_dli_mol_m2_day: [12, 22]
+    recommended_red_blue_ratio: [2, 4]
+    co2_ppm: 400
+    optimal_temperature_c: [10, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.0, 1.6]
+    ph: [6.0, 7.0]
+    notes: >
+      Regular cutting encourages fresh regrowth; avoid waterlogging.
+
+  - name: mature
+    duration_days: [40, 120]
+    ppfd_umol_m2_s: [200, 500]
+    recommended_dli_mol_m2_day: [15, 30]
+    recommended_red_blue_ratio: [3, 5]
+    co2_ppm: 400
+    optimal_temperature_c: [10, 24]
+    photoperiod_hours: [12, 16]
+    ec_mS_cm: [1.2, 2.0]
+    ph: [6.0, 7.0]
+    notes: >
+      Flowering will reduce leaf quality; harvest leaves before flowering for best flavor.

@@ -1,0 +1,46 @@
+latin_name: Anethum graveolens
+common_name: Dill
+family: Apiaceae
+type: herb
+description: >
+  Dill is an annual herb that prefers full sun to bright light and well-drained soil. It enjoys moderate to high light levels.
+
+stages:
+  - name: seedling
+    duration_days: [7, 14]
+    ppfd_umol_m2_s: [80, 180]
+    recommended_dli_mol_m2_day: [8, 16]
+    recommended_red_blue_ratio: [1.5, 3]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 25]
+    photoperiod_hours: [12, 18]
+    ec_mS_cm: [0.8, 1.4]
+    ph: [6.0, 7.0]
+    notes: >
+      Thin seedlings for good air circulation and leggy prevention.
+
+  - name: vegetative
+    duration_days: [20, 40]
+    ppfd_umol_m2_s: [250, 500]
+    recommended_dli_mol_m2_day: [18, 30]
+    recommended_red_blue_ratio: [3, 6]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 24]
+    photoperiod_hours: [12, 18]
+    ec_mS_cm: [1.0, 1.8]
+    ph: [6.0, 7.0]
+    notes: >
+      Dill benefits from higher light for strong upright growth and fuller foliage.
+
+  - name: mature
+    duration_days: [40, 80]
+    ppfd_umol_m2_s: [300, 700]
+    recommended_dli_mol_m2_day: [20, 40]
+    recommended_red_blue_ratio: [4, 8]
+    co2_ppm: 400
+    optimal_temperature_c: [15, 24]
+    photoperiod_hours: [12, 18]
+    ec_mS_cm: [1.2, 2.2]
+    ph: [6.0, 7.0]
+    notes: >
+      Harvest leaves and seeds at maturity depending on use.
