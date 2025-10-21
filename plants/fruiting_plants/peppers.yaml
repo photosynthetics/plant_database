@@ -13,7 +13,7 @@ stages:
     recommended_far_red_ppfd: [3, 18]
     recommended_dli_mol_m2_day: [10, 25]
     recommended_red_blue_ratio: [3, 6]
-    co2_ppm: [400, 800]
+    co2_ppm: 600
     optimal_temperature_c: [20, 28]
     photoperiod_hours: [12, 16]
     ec_mS_cm: [1.2, 2.0]
@@ -27,7 +27,7 @@ stages:
     recommended_far_red_ppfd: [7.5, 48]
     recommended_dli_mol_m2_day: [20, 40]
     recommended_red_blue_ratio: [3, 6]
-    co2_ppm: [400, 1000]
+    co2_ppm: 700
     optimal_temperature_c: [20, 30]
     photoperiod_hours: [12, 16]
     ec_mS_cm: [1.6, 3.0]
@@ -41,7 +41,7 @@ stages:
     recommended_far_red_ppfd: [16, 90]
     recommended_dli_mol_m2_day: [30, 60]
     recommended_red_blue_ratio: [4, 8]
-    co2_ppm: [600, 1200]
+    co2_ppm: 900
     optimal_temperature_c: [20, 32]
     photoperiod_hours: [12, 16]
     ec_mS_cm: [1.8, 3.5]
