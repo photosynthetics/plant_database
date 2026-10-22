@@ -1,0 +1,6 @@
+# Every text file is stored LF and checked out LF on every machine, whatever
+# core.autocrlf says (A5-10). Binary files are never converted.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+# Binary whatever git's content sniffing would guess:
