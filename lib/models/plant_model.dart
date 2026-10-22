@@ -17,7 +17,8 @@ abstract class PlantModel with _$PlantModel {
     required List<Stage> stages,
   }) = _PlantModel;
 
-  factory PlantModel.fromJson(Map<String, dynamic> json) => _$PlantModelFromJson(json);
+  factory PlantModel.fromJson(Map<String, dynamic> json) =>
+      _$PlantModelFromJson(json);
 
   /// Parse a YAML string (contents of a .yaml file) into a PlantModel.
   factory PlantModel.fromYamlString(String yamlString) {
@@ -108,7 +109,11 @@ dynamic _convertYamlNode(dynamic value) {
 String _snakeToCamel(String s) {
   if (!s.contains('_')) return s;
   final parts = s.split('_');
-  return parts.first + parts.skip(1).map((p) => p.isEmpty ? '' : p[0].toUpperCase() + p.substring(1)).join();
+  return parts.first +
+      parts
+          .skip(1)
+          .map((p) => p.isEmpty ? '' : p[0].toUpperCase() + p.substring(1))
+          .join();
 }
 
 /// Walk a dynamic map and convert any list of two numbers into a MinMax-style map
@@ -118,9 +123,14 @@ void _normalizeMinMaxInMap(Map<String, dynamic> map) {
     final value = entry.value;
     if (value is Map<String, dynamic>) {
       _normalizeMinMaxInMap(value);
-    } else if (value is List && value.length == 2 && value.every((e) => e is num)) {
+    } else if (value is List &&
+        value.length == 2 &&
+        value.every((e) => e is num)) {
       // Convert any numeric pair to a MinMax map
-      map[key] = {'min': (value[0] as num).toDouble(), 'max': (value[1] as num).toDouble()};
+      map[key] = {
+        'min': (value[0] as num).toDouble(),
+        'max': (value[1] as num).toDouble(),
+      };
     } else if (value is List) {
       // For lists of maps (e.g., stages), normalize each element
       for (var i = 0; i < value.length; i++) {
@@ -147,8 +157,9 @@ abstract class MinMax with _$MinMax {
     if (index == 1) return max;
     throw RangeError.index(index, this, 'Index out of range: $index');
   }
-  bool get isValid => (!(min.isNaN || max.isNaN) && min <= max) && !(min == 0 && max == 0);
+
+  bool get isValid =>
+      (!(min.isNaN || max.isNaN) && min <= max) && !(min == 0 && max == 0);
 
   double get average => isValid ? (min + max) / 2.0 : 0.0;
-
 }
