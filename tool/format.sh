@@ -3,6 +3,7 @@
 # Usage: bash tool/format.sh [dart format args...]
 # CI: bash tool/format.sh --output=none --set-exit-if-changed
 set -euo pipefail
+cd "$(dirname "${BASH_SOURCE[0]}")"
 cd "$(git rev-parse --show-toplevel)"
 git ls-files -z -- '*.dart' \
   ':(exclude,glob)**/*.g.dart' ':(exclude,glob)**/*.freezed.dart' ':(exclude,glob)**/*.pb.dart' \
