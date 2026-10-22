@@ -43,9 +43,13 @@ jobs:
         run: bash tool/format.sh --output=none --set-exit-if-changed
       - name: Analyze (no errors, no more findings than the baseline)
         run: |
-          out=$(dart analyze --format=machine 2>&1 || true)
+          rc=0
+          out=$(dart analyze --format=machine --fatal-infos 2>&1) || rc=$?
           printf '%s\n' "$out"
+          # exit codes: 0 clean, 1 infos, 2 warnings, 3 errors; anything else (64 bad input, crash) did not analyze
+          case "$rc" in 0|1|2|3) ;; *) echo "dart analyze did not complete (exit $rc)"; exit 1 ;; esac
           errors=$(printf '%s\n' "$out" | grep -c '^ERROR|' || true)
           total=$(printf '%s\n' "$out" | grep -cE '^(ERROR|WARNING|INFO)\|' || true)
-          echo "analyze: errors=$errors total=$total ceiling=0"
+          echo "analyze: exit=$rc errors=$errors total=$total ceiling=0"
+          if [ "$rc" -ne 0 ] && [ "$total" -eq 0 ]; then echo "exit $rc but no findings parsed"; exit 1; fi
           [ "$errors" -eq 0 ] && [ "$total" -le 0 ]
