@@ -5,7 +5,10 @@
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")"
 cd "$(git rev-parse --show-toplevel)"
-git ls-files -z -- '*.dart' \
+# --cached --others --exclude-standard: an UNSTAGED new file is formatted and
+# checked too. With tracked files only, four new test files were committed
+# unformatted while the local gate said 0 (WS1, 2026-10-22).
+git ls-files -z --cached --others --exclude-standard -- '*.dart' \
   ':(exclude,glob)**/*.g.dart' ':(exclude,glob)**/*.freezed.dart' ':(exclude,glob)**/*.pb.dart' \
   ':(exclude,glob)**/*.pbenum.dart' ':(exclude,glob)**/*.pbjson.dart' ':(exclude,glob)**/*.pbgrpc.dart' \
   ':(exclude,glob)**/*.pbserver.dart' ':(exclude,glob)**/*.mocks.dart' ':(exclude,glob)lib/src/rust/**' \
