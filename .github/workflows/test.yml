@@ -1,0 +1,51 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['**.md']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Line endings are LF
+        run: |
+          grep -qx '\* text=auto eol=lf' .gitattributes
+          bad=$(git ls-files --eol | awk '$1=="i/crlf" || $1=="i/mixed" || $2=="w/crlf"')
+          if [ -n "$bad" ]; then printf '%s\n' "$bad"; exit 1; fi
+
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 3.11.4
+      - name: Dependencies
+        run: dart pub get
+      - name: Format
+        run: bash tool/format.sh --output=none --set-exit-if-changed
+      - name: Analyze (no errors, no more findings than the baseline)
+        run: |
+          out=$(dart analyze --format=machine 2>&1 || true)
+          printf '%s\n' "$out"
+          errors=$(printf '%s\n' "$out" | grep -c '^ERROR|' || true)
+          total=$(printf '%s\n' "$out" | grep -cE '^(ERROR|WARNING|INFO)\|' || true)
+          echo "analyze: errors=$errors total=$total ceiling=0"
+          [ "$errors" -eq 0 ] && [ "$total" -le 0 ]
